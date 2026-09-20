@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "providers.json"
 OMNI = ROOT / "data" / "omniroute-free-catalog.json"
 ANTIGRAVITY = ROOT / "data" / "antigravity-free-models.json"
+OMNI_MODELS = ROOT / "data" / "omniroute-free-models.json"
 
 REQUIRED = [
     "id", "name", "category", "signup_url", "docs_url", "base_url", "auth",
@@ -137,6 +138,21 @@ def main() -> int:
                 errors.append("Antigravity last_verified must be YYYY-MM-DD")
         except Exception as exc:
             errors.append(f"unable to parse Antigravity catalog: {exc}")
+
+    if OMNI_MODELS.exists():
+        try:
+            omni_models = json.loads(OMNI_MODELS.read_text(encoding="utf-8"))
+            entries = omni_models.get("entries")
+            if not isinstance(entries, list) or not entries:
+                errors.append("OmniRoute model catalog entries must be a non-empty list")
+            for idx, entry in enumerate(entries or [], start=1):
+                if not isinstance(entry, dict) or not isinstance(entry.get("model_id"), str) or not entry.get("model_id"):
+                    errors.append(f"OmniRoute model entry #{idx} needs model_id")
+            counts = omni_models.get("counts")
+            if not isinstance(counts, dict):
+                errors.append("OmniRoute model catalog counts must be an object")
+        except Exception as exc:
+            errors.append(f"unable to parse OmniRoute model catalog: {exc}")
 
     # Guard against accidentally adding a duplicate source or empty display metadata.
     for provider in providers:
