@@ -6,7 +6,8 @@
     "path": "open-sse/config/freeModelCatalog.data.ts",
     "url": "https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/open-sse/config/freeModelCatalog.data.ts",
     "catalog_curated_at": "2026-09-12",
-    "documentation": "https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/FREE_TIERS.md"
+    "documentation": "https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/FREE_TIERS.md",
+    "live_published_headline_models": 516
   },
   "methodology": "Model-level access snapshot derived from OmniRoute's hand-curated FREE_MODEL_BUDGETS. This is an access-path catalog: the same underlying model can appear through multiple free pools. free_type and ToS flags are preserved; discontinued records are retained only for provenance and are not considered currently free.",
   "counts": {
@@ -5560,5 +5561,6 @@
     "navy": [
       "shared-pool"
     ]
-  }
+  },
+  "snapshot_imported_at": "2026-09-20"
 }
