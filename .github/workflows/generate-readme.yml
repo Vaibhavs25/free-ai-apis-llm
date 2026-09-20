@@ -4,7 +4,10 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['data/providers.json']
+    paths:
+      - 'data/providers.json'
+      - 'data/antigravity-free-models.json'
+      - 'scripts/generate_readme.py'
 
 permissions:
   contents: write
