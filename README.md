@@ -1,5 +1,19 @@
 # 🌐 AI API Atlas
 
+### The map of the free AI ecosystem.
+
+> Discover free AI models, APIs, gateways, and coding-agent access paths in one open, machine-readable directory.
+
+[![Data](https://img.shields.io/badge/data-structured%20JSON-informational)](data/providers.json) [![Free model records](https://img.shields.io/badge/free%20model%20records-489-brightgreen)](data/omniroute-free-models.json) [![Last verified](https://img.shields.io/badge/verified-2026--09--20-success)](data/providers.json) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+## 🚀 Find free AI without the scavenger hunt
+
+Free AI changes fast: models disappear, quotas move, cards become required, and old tutorials keep circulating. AI API Atlas tracks the access details developers actually need before they integrate.
+
+**489 free-model catalog records · 35 curated providers/gateways · exact model IDs · quotas · auth requirements · OpenAI compatibility · verification sources**
+
+[Browse providers](#provider-apis) · [Browse 489 free-model records](data/omniroute-free-models.json) · [Marketing kit](docs/MARKETING.md) · [Contribute](CONTRIBUTING.md)
+
 > A continuously maintained, developer-first directory of AI APIs, free tiers, models, limits, compatibility, and access requirements.
 
 [![Data](https://img.shields.io/badge/data-structured%20JSON-informational)](data/providers.json) [![Last verified](https://img.shields.io/badge/verified-2026--09--20-success)](data/providers.json) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
