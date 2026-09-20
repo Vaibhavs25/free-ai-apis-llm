@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "product": "Google Antigravity",
+  "last_verified": "2026-09-20",
+  "scope": "Free models available through the Google Antigravity product on the $0 Individual plan. This is a product-access catalog, not a claim that Antigravity exposes these models as a standalone public inference API.",
+  "plan": {
+    "name": "Individual",
+    "price": "$0/month",
+    "access": "Basic weekly rate limits",
+    "source": "https://antigravity.google/pricing"
+  },
+  "models": [
+    {
+      "id": "gemini-3.8-flash",
+      "provider": "Google",
+      "kind": "reasoning",
+      "availability": "free_individual",
+      "notes": "Selectable reasoning model."
+    },
+    {
+      "id": "gemini-3.7-flash",
+      "provider": "Google",
+      "kind": "reasoning",
+      "availability": "free_individual",
+      "notes": "Selectable reasoning model."
+    },
+    {
+      "id": "gemini-3.6-flash",
+      "provider": "Google",
+      "kind": "reasoning",
+      "availability": "free_individual",
+      "notes": "Selectable reasoning model."
+    },
+    {
+      "id": "gemini-3.1-pro",
+      "provider": "Google",
+      "kind": "reasoning",
+      "availability": "free_individual",
+      "notes": "Selectable reasoning model."
+    },
+    {
+      "id": "claude-sonnet-4.6",
+      "provider": "Anthropic",
+      "kind": "reasoning",
+      "availability": "free_individual",
+      "notes": "Selectable reasoning model; thinking mode."
+    },
+    {
+      "id": "claude-opus-4.6",
+      "provider": "Anthropic",
+      "kind": "reasoning",
+      "availability": "free_individual",
+      "notes": "Selectable reasoning model; thinking mode."
+    },
+    {
+      "id": "gpt-oss-120b",
+      "provider": "OpenAI",
+      "kind": "reasoning",
+      "availability": "free_individual",
+      "notes": "Selectable reasoning model."
+    }
+  ],
+  "additional_models": [
+    {
+      "id": "nano-banana-2",
+      "provider": "Google",
+      "kind": "image",
+      "access": "internal_product_use",
+      "notes": "Used by Antigravity's generative image tool for certain agent-generated visual tasks; not listed as a user-selectable reasoning model."
+    }
+  ],
+  "usage_notes": [
+    "Free users receive meaningful baseline quota refreshed weekly, with weekly rate limits.",
+    "Exact usage limits are dynamic and are shown in the Antigravity model/usage UI.",
+    "Availability and limits can change with capacity and service updates.",
+    "The product supports desktop access on Windows, macOS, and Linux."
+  ],
+  "sources": [
+    "https://antigravity.google/docs/models/",
+    "https://antigravity.google/docs/plans",
+    "https://antigravity.google/pricing"
+  ]
+}
