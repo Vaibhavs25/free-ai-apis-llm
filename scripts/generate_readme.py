@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "providers.json"
 RETIRED = ROOT / "data" / "retired.json"
 OMNI = ROOT / "data" / "omniroute-free-catalog.json"
+ANTIGRAVITY = ROOT / "data" / "antigravity-free-models.json"
 OUTPUT = ROOT / "README.md"
 
 ICON = {
@@ -98,6 +99,7 @@ def main() -> None:
     retired = json.loads(RETIRED.read_text(encoding="utf-8"))["services"] if RETIRED.exists() else []
     omni = json.loads(OMNI.read_text(encoding="utf-8")) if OMNI.exists() else {"entries": []}
     omni_entries = omni.get("entries", [])
+    antigravity = json.loads(ANTIGRAVITY.read_text(encoding="utf-8")) if ANTIGRAVITY.exists() else {"models": [], "additional_models": [], "usage_notes": [], "sources": []}
     providers = data["providers"]
     first_party = sorted([p for p in providers if p["category"] == "first_party"], key=lambda x: x["name"].lower())
     inference = sorted([p for p in providers if p["category"] == "inference_provider"], key=lambda x: x["name"].lower())
@@ -163,6 +165,7 @@ def main() -> None:
         "- [Inference providers](#inference-providers-and-gateways)",
         "- [Gateways and routers](#gateways-and-routers)",
         "- [OmniRoute upstreams](#omniroute-upstreams)",
+        "- [Google Antigravity free models](#google-antigravity-free-models)",
         "- [Verification model](#verification-model)",
         "- [Contributing](CONTRIBUTING.md)",
         "- [Security](SECURITY.md)",
@@ -212,6 +215,20 @@ def main() -> None:
         "| OmniRoute provider | Free classification | Terms flag | Note |",
         "|---|---|---|---|",
         *[f"| {e['omniroute_id']} | {e['free_type']} | {e['tos']} | {e.get('note','')} |" for e in omni_entries],
+        "",
+        "## Google Antigravity free models",
+        "",
+        "Google Antigravity currently lists these models as available on the **$0/month Individual plan**. This is a product-access catalog, not a standalone public inference-API claim.",
+        "",
+        "| Model | Provider | Type | Free access | Notes |",
+        "|---|---|---|---|---|",
+        *[f"| {m['id']} | {m['provider']} | {m['kind']} | ✅ Individual | {m.get('notes','')} |" for m in antigravity.get('models', [])],
+        "",
+        "**Additional product models:** " + ", ".join(f"{m['id']} ({m['provider']}; {m['access']})" for m in antigravity.get('additional_models', [])),
+        "",
+        "**Usage:** " + " ".join(antigravity.get('usage_notes', [])),
+        "",
+        "**Sources:** " + "; ".join(f"[{u}]({u})" for u in antigravity.get('sources', [])),
         "",
         "## Verification model",
         "",
