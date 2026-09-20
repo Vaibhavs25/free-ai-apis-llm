@@ -729,11 +729,11 @@ Google Antigravity currently lists these models as available on the **$0/month I
 
 ## OmniRoute model-level free catalog
 
-The imported OmniRoute **release/v3.8.51** snapshot contains **489 free-model catalog records**, including **482 non-discontinued records** and **7 records marked discontinued** in the source. It covers **78 provider IDs** and **77 pool keys**.
+The machine-readable model catalog below is a snapshot of OmniRoute's hand-curated free-model baseline. It is an **access-path catalog**: the same underlying model can appear through multiple providers/pools, so record count is not the same as unique-model count.
 
-These are **access-path records**, not 489 unique underlying models: the same model can appear through multiple providers or shared pools. The full machine-readable snapshot preserves the provider, exact model ID, free-access classification, pool key, ToS flag, and token/credit fields.
+f"**{len(omni_models.get('entries', []))} active records · {omni_models.get('counts', {}).get('unique_active_model_ids', 0)} unique active model IDs · {omni_models.get('counts', {}).get('active_providers', 0)} providers** · [full JSON](data/omniroute-free-models.json)",
 
-Full snapshot: [data/omniroute-free-models.json](data/omniroute-free-models.json).
+The imported snapshot follows OmniRoute's reproducible release catalog. OmniRoute may publish a different resolved/live count when its Radar overlay or catalog changes; this repository does not fabricate live entries into the static snapshot.
 
 ## Verification model
 
