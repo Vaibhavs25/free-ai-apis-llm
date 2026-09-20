@@ -8,7 +8,7 @@
 
 This directory deliberately includes **free APIs that require an account/login**. Login-required access is not treated as a worse class of API: it is tracked separately so you can filter by the setup you are willing to accept.
 
-**34 entries · 1 gateway · 15 OmniRoute upstreams · 26 account-required · 12 with no card documented · 22 card requirements unknown · 30 OpenAI-compatible · 21 recurring/model-free entries**
+**36 entries · 1 gateway · 15 OmniRoute upstreams · 27 account-required · 12 with no card documented · 24 card requirements unknown · 32 OpenAI-compatible · 23 recurring/model-free entries**
 
 | Provider | Free access | Account | Card | OpenAI-compatible | Quota |
 |---|---|---:|---:|---:|---|
@@ -46,6 +46,8 @@ This directory deliberately includes **free APIs that require an account/login**
 | [LongCat API](https://longcat.ai/platform/) | 🧪 OmniRoute | ✅ | ? | ✅ | Current OmniRoute evidence records a one-time 10M-token free allocation; verify the live LongCat account quota before use. |
 | [Morph](https://www.morphllm.com/) | 💵 login | ✅ | ? | ✅ | 200 requests/month free; hosted model usage after the free allowance is usage-priced. |
 | [Public AI Gateway](https://platform.publicai.co/) | 🔄 login | ✅ | ? | ✅ | The current Free tier is documented at 100 requests/minute; paid/Plus plans increase that limit. |
+| [Kilo Code](https://app.kilo.ai/profile) | 🆓 anonymous | — | ? | ✅ | The reference snapshot lists 200 requests/hour per IP for the free pool; the free model roster changes frequently. |
+| [NVIDIA NIM](https://build.nvidia.com/explore/discover) | 🔄 login | ✅ | ? | ✅ | The reference snapshot lists 40 RPM and 10,000 requests/day for its included models; check the current NVIDIA model page for live limits. |
 
 ## 🧑‍💻 Free APIs that require login
 
@@ -68,6 +70,7 @@ These entries provide free API access after account creation and/or key issuance
 | [Aion Labs](https://www.aionlabs.ai/app/api-keys/) | Login + API key | Unknown | ♾️ Aion Labs advertises a permanent free tier for its text inference APIs. |
 | [Morph](https://www.morphllm.com/) | Login + API key | Unknown | 💵 Morph publishes an OpenAI-compatible API with 200 free requests every month. |
 | [Public AI Gateway](https://platform.publicai.co/) | Login + API key | Unknown | 🔄 Public AI documents a Free tier with API access to public and sovereign models. |
+| [NVIDIA NIM](https://build.nvidia.com/explore/discover) | Login + API key | Unknown | 🔄 NVIDIA NIM provides API access to selected models for NVIDIA Developer Program members, subject to model-specific limits. |
 
 ## 🔎 How to use the data
 
@@ -351,6 +354,20 @@ OmniRoute's current catalog records a signup credit for Hyperbolic API experimen
 
 **Last verified:** 2026-09-20 · [omniroute_catalog_plus_official_docs sources](https://docs.hyperbolic.ai/)
 
+### 🆓 [Kilo Code](https://app.kilo.ai/profile) 🇺🇸
+
+**Access:** No login · **Card:** Unknown · **OpenAI-compatible:** ✅
+
+Kilo Code exposes a free model pool and an automatic free router; the free gateway path does not require an API key.
+
+**Quota:** The reference snapshot lists 200 requests/hour per IP for the free pool; the free model roster changes frequently.
+
+**Base URL:** `https://api.kilo.ai/api/gateway`
+
+**Models:** `kilo-auto/free` (text — 200 req/hr (reference snapshot)); `nvidia/nemotron-3-super-120b-a12b:free` (text — 200 req/hr (reference snapshot)); `stepfun/step-3.7-flash:free` (text, image — 200 req/hr (reference snapshot)); `poolside/laguna-s-2.1:free` (text, code — 200 req/hr (reference snapshot))
+
+**Last verified:** 2026-09-20 · [official_kilo_docs_plus_reference_crosscheck sources](https://kilo.ai/docs/gateway/authentication)
+
 ### 🆓 [Kilo Code Gateway](https://app.kilo.ai/profile) 🇺🇸
 
 **Access:** No login · **Card:** Unknown · **OpenAI-compatible:** ✅
@@ -448,6 +465,20 @@ NavyAI currently advertises a $0 Free plan for API use.
 **Models:** `shared-free-pool` (text)
 
 **Last verified:** 2026-09-20 · [official_provider_page_plus_omniroute_audit sources](https://api.navy/)
+
+### 🔄 [NVIDIA NIM](https://build.nvidia.com/explore/discover) 🇺🇸
+
+**Access:** Login + API key · **Card:** Unknown · **OpenAI-compatible:** ✅
+
+NVIDIA NIM provides API access to selected models for NVIDIA Developer Program members, subject to model-specific limits.
+
+**Quota:** The reference snapshot lists 40 RPM and 10,000 requests/day for its included models; check the current NVIDIA model page for live limits.
+
+**Base URL:** `https://integrate.api.nvidia.com/v1`
+
+**Models:** `nvidia/nemotron-3-super-120b-a12b` (text — 40 RPM, 10,000 RPD (reference snapshot)); `nvidia/nemotron-3-nano-30b-a3b` (text — 40 RPM, 10,000 RPD (reference snapshot)); `meta/llama-3.3-70b-instruct` (text — 40 RPM, 10,000 RPD (reference snapshot)); `openai/gpt-oss-120b` (text — 40 RPM, 10,000 RPD (reference snapshot))
+
+**Last verified:** 2026-09-20 · [official_nvidia_docs_plus_reference_crosscheck sources](https://docs.api.nvidia.com/nim/)
 
 ### 🔄 [Ollama Cloud](https://ollama.com/settings/keys) 🇺🇸
 
