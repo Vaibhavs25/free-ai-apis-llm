@@ -87,6 +87,7 @@ Example fields include `account_required`, `card_required`, `free_tier_type`, `f
 - [Inference providers](#inference-providers-and-gateways)
 - [Gateways and routers](#gateways-and-routers)
 - [OmniRoute upstreams](#omniroute-upstreams)
+- [Google Antigravity free models](#google-antigravity-free-models)
 - [Verification model](#verification-model)
 - [Contributing](CONTRIBUTING.md)
 - [Security](SECURITY.md)
@@ -705,6 +706,26 @@ OmniRoute's current free-tier catalog is tracked as a discovery snapshot. These 
 | uncloseai | keyless | caution |  |
 | vertex | signup_credit | caution |  |
 | xkiro | recurring | caution |  |
+
+## Google Antigravity free models
+
+Google Antigravity currently lists these models as available on the **$0/month Individual plan**. This is a product-access catalog, not a standalone public inference-API claim.
+
+| Model | Provider | Type | Free access | Notes |
+|---|---|---|---|---|
+| gemini-3.8-flash | Google | reasoning | ✅ Individual | Selectable reasoning model. |
+| gemini-3.7-flash | Google | reasoning | ✅ Individual | Selectable reasoning model. |
+| gemini-3.6-flash | Google | reasoning | ✅ Individual | Selectable reasoning model. |
+| gemini-3.1-pro | Google | reasoning | ✅ Individual | Selectable reasoning model. |
+| claude-sonnet-4.6 | Anthropic | reasoning | ✅ Individual | Selectable reasoning model; thinking mode. |
+| claude-opus-4.6 | Anthropic | reasoning | ✅ Individual | Selectable reasoning model; thinking mode. |
+| gpt-oss-120b | OpenAI | reasoning | ✅ Individual | Selectable reasoning model. |
+
+**Additional product models:** nano-banana-2 (Google; internal_product_use)
+
+**Usage:** Free users receive meaningful baseline quota refreshed weekly, with weekly rate limits. Exact usage limits are dynamic and are shown in the Antigravity model/usage UI. Availability and limits can change with capacity and service updates. The product supports desktop access on Windows, macOS, and Linux.
+
+**Sources:** [https://antigravity.google/docs/models/](https://antigravity.google/docs/models/); [https://antigravity.google/docs/plans](https://antigravity.google/docs/plans); [https://antigravity.google/pricing](https://antigravity.google/pricing)
 
 ## Verification model
 
