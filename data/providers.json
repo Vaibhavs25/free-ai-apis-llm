@@ -1171,6 +1171,671 @@
       ],
       "direct_api_status": "openai_compatible_api_documented",
       "endpoint_type": "upstream_api"
+    },
+    {
+      "id": "nara-router",
+      "name": "Nara Router",
+      "category": "inference_provider",
+      "country": "ID",
+      "country_flag": "🇮🇩",
+      "signup_url": "https://router.bynara.id/",
+      "docs_url": "https://router.bynara.id/docs",
+      "pricing_url": "https://router.bynara.id/api/plans",
+      "base_url": "https://router.bynara.id/api",
+      "auth": "api_key",
+      "account_required": true,
+      "card_required": null,
+      "identity_verification": "telegram-linked key",
+      "openai_compatible": true,
+      "free_tier_type": "daily_free_allocation",
+      "free_summary": "Nara currently publishes a Free plan with a daily token allowance and no paid subscription required for the free path.",
+      "quota_summary": "7M tokens/day and 15 RPM on the currently published Free plan; the daily pool is shared across its free models.",
+      "privacy_summary": "Review current Nara terms before proxying third-party models.",
+      "notable_models": [
+        {
+          "id": "agnes-2.0-flash",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "laguna-s-2.1",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "mistral-large",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "qwen3.8-27b",
+          "modalities": [
+            "text"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "official_provider_page_plus_omniroute_audit",
+      "sources": [
+        "https://router.bynara.id/",
+        "https://router.bynara.id/docs",
+        "https://router.bynara.id/api/plans",
+        "https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/FREE_TIERS.md"
+      ],
+      "status": "active",
+      "access_via": [
+        "OmniRoute"
+      ]
+    },
+    {
+      "id": "xkiro",
+      "name": "xKiro",
+      "category": "inference_provider",
+      "country": "US",
+      "country_flag": "🌐",
+      "signup_url": "https://xkiro.com/",
+      "docs_url": "https://docs.xkiro.com/guides/pricing/",
+      "pricing_url": "https://xkiro.com/",
+      "base_url": "https://api.xkiro.com/v1",
+      "auth": "api_key",
+      "account_required": true,
+      "card_required": false,
+      "identity_verification": "none",
+      "openai_compatible": true,
+      "free_tier_type": "daily_free_allocation",
+      "free_summary": "xKiro documents a Free plan with access to free-tier models on free accounts.",
+      "quota_summary": "The current documentation exposes a daily account-level free-token allowance; exact limits are returned by the live usage endpoint.",
+      "privacy_summary": "Review xKiro terms and upstream model/provider conditions before proxy use.",
+      "notable_models": [
+        {
+          "id": "qwen/qwen3.5-flash:free",
+          "modalities": [
+            "text",
+            "image"
+          ]
+        },
+        {
+          "id": "minimax/minimax-m2.7:free",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "mistralai/mistral-small-2603",
+          "modalities": [
+            "text"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "official_xkiro_docs_plus_omniroute_audit",
+      "sources": [
+        "https://xkiro.com/",
+        "https://docs.xkiro.com/guides/pricing/",
+        "https://docs.xkiro.com/api/usage/",
+        "https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/open-sse/config/freeModelCatalog.data.ts"
+      ],
+      "status": "active",
+      "access_via": [
+        "OmniRoute"
+      ],
+      "direct_api_status": "Direct API documented; free models are subject to account-level allowance."
+    },
+    {
+      "id": "api-airforce",
+      "name": "API Airforce",
+      "category": "inference_provider",
+      "country_flag": "🌐",
+      "signup_url": "https://api.airforce/",
+      "docs_url": "https://api.airforce/docs/quickstart/",
+      "pricing_url": "https://api.airforce/",
+      "base_url": "https://api.airforce",
+      "auth": "api_key",
+      "account_required": true,
+      "card_required": null,
+      "identity_verification": "unknown",
+      "openai_compatible": true,
+      "free_tier_type": "daily_free_allocation",
+      "free_summary": "API Airforce documents a Free plan for API experimentation.",
+      "quota_summary": "Published Free plan limit: 1 RPM and 1,000 requests/day.",
+      "privacy_summary": "Review provider terms before proxying third-party models.",
+      "notable_models": [
+        {
+          "id": "deepseek/deepseek-v3",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "qwen/qwen3-32b",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "google/gemini-2.5-flash",
+          "modalities": [
+            "text",
+            "image"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "official_docs",
+      "sources": [
+        "https://api.airforce/docs/quickstart/",
+        "https://api.airforce/",
+        "https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/FREE_TIERS.md"
+      ],
+      "status": "active",
+      "access_via": [
+        "OmniRoute"
+      ]
+    },
+    {
+      "id": "bazaarlink",
+      "name": "BazaarLink",
+      "category": "inference_provider",
+      "country_flag": "🌐",
+      "signup_url": "https://bazaarlink.ai/en/docs",
+      "docs_url": "https://bazaarlink.ai/en/docs",
+      "pricing_url": "https://bazaarlink.ai/en/docs",
+      "base_url": "https://api.bazaarlink.ai/v1",
+      "auth": "api_key",
+      "account_required": true,
+      "card_required": null,
+      "identity_verification": "unknown",
+      "openai_compatible": true,
+      "free_tier_type": "free_pool",
+      "free_summary": "BazaarLink exposes an `auto:free` route and publishes a live set of free models.",
+      "quota_summary": "Free routing is subject to the provider's current RPM/daily cap; the live /v1/models catalog marks free models with a :free suffix.",
+      "privacy_summary": "Do not assume upstream proxying is permitted for every model; inspect live provider terms.",
+      "notable_models": [
+        {
+          "id": "auto:free",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "claude-sonnet-4.6",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "gpt-5.4-mini",
+          "modalities": [
+            "text"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "official_docs_plus_omniroute_audit",
+      "sources": [
+        "https://bazaarlink.ai/en/docs",
+        "https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/open-sse/config/freeModelCatalog.data.ts"
+      ],
+      "status": "active",
+      "access_via": [
+        "OmniRoute"
+      ]
+    },
+    {
+      "id": "navyai",
+      "name": "NavyAI",
+      "category": "inference_provider",
+      "country_flag": "🌐",
+      "signup_url": "https://api.navy/",
+      "docs_url": "https://api.navy/",
+      "pricing_url": "https://api.navy/",
+      "base_url": "https://api.navy/v1",
+      "auth": "api_key",
+      "account_required": true,
+      "card_required": null,
+      "identity_verification": "unknown",
+      "openai_compatible": true,
+      "free_tier_type": "daily_free_allocation",
+      "free_summary": "NavyAI currently advertises a $0 Free plan for API use.",
+      "quota_summary": "The current public plan page advertises 150K tokens/day and 20 RPM.",
+      "privacy_summary": "Review current NavyAI terms and model-specific restrictions before use.",
+      "notable_models": [
+        {
+          "id": "shared-free-pool",
+          "modalities": [
+            "text"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "official_provider_page_plus_omniroute_audit",
+      "sources": [
+        "https://api.navy/",
+        "https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/FREE_TIERS.md"
+      ],
+      "status": "active",
+      "access_via": [
+        "OmniRoute"
+      ]
+    },
+    {
+      "id": "ai-horde",
+      "name": "AI Horde",
+      "category": "inference_provider",
+      "country_flag": "🌐",
+      "signup_url": "https://aihorde.net/register",
+      "docs_url": "https://aihorde.net/api",
+      "pricing_url": "https://aihorde.net/",
+      "base_url": "https://aihorde.net/api/v2",
+      "auth": "api_key_or_anonymous",
+      "account_required": false,
+      "card_required": false,
+      "identity_verification": "none",
+      "openai_compatible": false,
+      "free_tier_type": "keyless_or_free_token",
+      "free_summary": "AI Horde provides community-backed AI inference that is free of charge, with anonymous use supported.",
+      "quota_summary": "Availability and speed depend on the community worker pool rather than a fixed commercial token quota.",
+      "privacy_summary": "Community-hosted inference has different trust characteristics from a first-party API.",
+      "notable_models": [
+        {
+          "id": "aphrodite/TheDrummer/Cydonia-24B-v4.3",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "aphrodite/TheDrummer/Skyfall-31B-v4.2",
+          "modalities": [
+            "text"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "official_site_plus_omniroute_audit",
+      "sources": [
+        "https://aihorde.net/register",
+        "https://aihorde.net/api",
+        "https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/open-sse/config/freeModelCatalog.data.ts"
+      ],
+      "status": "active",
+      "access_via": [
+        "OmniRoute"
+      ],
+      "direct_api_status": "Native Horde API; not an OpenAI-compatible direct endpoint."
+    },
+    {
+      "id": "sea-lion",
+      "name": "SEA-LION API",
+      "category": "first_party",
+      "country": "SG",
+      "country_flag": "🇸🇬",
+      "signup_url": "https://docs.sea-lion.ai/guides/inferencing/api",
+      "docs_url": "https://docs.sea-lion.ai/guides/inferencing/api",
+      "pricing_url": "https://sea-lion.ai/try-sea-lion/",
+      "base_url": "https://api.sea-lion.ai/v1",
+      "auth": "api_key",
+      "account_required": true,
+      "card_required": false,
+      "identity_verification": "none",
+      "openai_compatible": true,
+      "free_tier_type": "free_trial_key",
+      "free_summary": "AI Singapore provides a free SEA-LION API for proof-of-concept development and testing.",
+      "quota_summary": "10 requests/minute on the free API; intended for POC use rather than production workloads.",
+      "privacy_summary": "Review AI Singapore terms and privacy policy.",
+      "notable_models": [
+        {
+          "id": "aisingapore/Llama-SEA-LION-v3.5-70B-R",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "aisingapore/Qwen-SEA-LION-v4.5-27B-IT",
+          "modalities": [
+            "text"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "official_provider_docs",
+      "sources": [
+        "https://docs.sea-lion.ai/guides/inferencing/api",
+        "https://github.com/aisingapore/sealion/blob/main/overview/faq.md",
+        "https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/open-sse/config/freeModelCatalog.data.ts"
+      ],
+      "status": "active",
+      "access_via": [
+        "OmniRoute"
+      ]
+    },
+    {
+      "id": "baidu-qianfan",
+      "name": "Baidu Qianfan ERNIE",
+      "category": "first_party",
+      "country": "CN",
+      "country_flag": "🇨🇳",
+      "signup_url": "https://console.bce.baidu.com/qianfan/ais/console/apiKey",
+      "docs_url": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/llf9l3kew",
+      "pricing_url": "https://cloud.baidu.com/news/news_c7a145b9-5c99-4870-939f-e09ba506aab3",
+      "base_url": "https://qianfan.baidubce.com/v2",
+      "auth": "api_key",
+      "account_required": true,
+      "card_required": null,
+      "identity_verification": "real_name_required",
+      "openai_compatible": true,
+      "free_tier_type": "permanent_free_tier",
+      "free_summary": "Baidu documents long-term free access for selected ERNIE services after real-name verification.",
+      "quota_summary": "Free RPM/TPM quotas are console-controlled; use the current Qianfan console as the exact source of limits.",
+      "privacy_summary": "Review Baidu Cloud and Qianfan data-use terms.",
+      "region_notes": "The free entitlement requires real-name verification.",
+      "notable_models": [
+        {
+          "id": "ernie-speed-8k",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "ernie-speed-128k",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "ernie-lite-8k",
+          "modalities": [
+            "text"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "official_provider_announcement",
+      "sources": [
+        "https://cloud.baidu.com/news/news_c7a145b9-5c99-4870-939f-e09ba506aab3",
+        "https://cloud.baidu.com/ask/10119",
+        "https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/FREE_TIERS.md"
+      ],
+      "status": "active",
+      "access_via": [
+        "OmniRoute"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek API",
+      "category": "first_party",
+      "country": "CN",
+      "country_flag": "🇨🇳",
+      "signup_url": "https://platform.deepseek.com/",
+      "docs_url": "https://api-docs.deepseek.com/",
+      "pricing_url": "https://api-docs.deepseek.com/quick_start/pricing/",
+      "base_url": "https://api.deepseek.com",
+      "auth": "api_key",
+      "account_required": true,
+      "card_required": false,
+      "identity_verification": "unknown",
+      "openai_compatible": true,
+      "free_tier_type": "free_trial_key",
+      "free_summary": "OmniRoute's current September 2026 catalog records a one-time free signup grant for the DeepSeek API.",
+      "quota_summary": "Current catalog evidence records 5M free tokens on signup for a limited period; confirm current account eligibility before relying on it.",
+      "privacy_summary": "Review DeepSeek Open Platform data-use terms before sending sensitive prompts.",
+      "notable_models": [
+        {
+          "id": "deepseek-chat",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "deepseek-reasoner",
+          "modalities": [
+            "text",
+            "reasoning"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "official_docs_plus_omniroute_audit",
+      "sources": [
+        "https://api-docs.deepseek.com/",
+        "https://api-docs.deepseek.com/quick_start/pricing/",
+        "https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/FREE_TIERS.md"
+      ],
+      "status": "active",
+      "access_via": [
+        "OmniRoute"
+      ]
+    },
+    {
+      "id": "vertex-ai",
+      "name": "Google Cloud Vertex AI",
+      "category": "first_party",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "signup_url": "https://console.cloud.google.com/",
+      "docs_url": "https://cloud.google.com/vertex-ai/generative-ai/docs/start/quickstarts",
+      "pricing_url": "https://cloud.google.com/free",
+      "base_url": "https://aiplatform.googleapis.com",
+      "auth": "google_cloud_auth",
+      "account_required": true,
+      "card_required": null,
+      "identity_verification": "unknown",
+      "openai_compatible": false,
+      "free_tier_type": "free_trial_key",
+      "free_summary": "New Google Cloud customers can receive $300 in free credits that may be used for eligible Vertex AI workloads.",
+      "quota_summary": "$300 new-customer cloud credit; one-time trial rather than a permanent API quota.",
+      "privacy_summary": "Vertex AI follows Google Cloud service/data terms.",
+      "notable_models": [
+        {
+          "id": "gemini-flash-family",
+          "modalities": [
+            "text",
+            "image",
+            "audio",
+            "video"
+          ]
+        },
+        {
+          "id": "gemma-family",
+          "modalities": [
+            "text"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "official_google_cloud_docs",
+      "sources": [
+        "https://cloud.google.com/free",
+        "https://cloud.google.com/vertex-ai/generative-ai/docs/start/quickstarts",
+        "https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/FREE_TIERS.md"
+      ],
+      "status": "active",
+      "access_via": [
+        "OmniRoute"
+      ]
+    },
+    {
+      "id": "hyperbolic",
+      "name": "Hyperbolic",
+      "category": "inference_provider",
+      "country_flag": "🌐",
+      "signup_url": "https://app.hyperbolic.ai/",
+      "docs_url": "https://docs.hyperbolic.ai/",
+      "pricing_url": "https://hyperbolic.ai/pricing",
+      "base_url": "https://api.hyperbolic.xyz/v1",
+      "auth": "api_key",
+      "account_required": true,
+      "card_required": null,
+      "identity_verification": "unknown",
+      "openai_compatible": true,
+      "free_tier_type": "free_trial_key",
+      "free_summary": "OmniRoute's current catalog records a signup credit for Hyperbolic API experimentation.",
+      "quota_summary": "Signup credit is one-time rather than a recurring free allowance; confirm the live account offer.",
+      "privacy_summary": "Review Hyperbolic terms before proxying upstream models.",
+      "notable_models": [
+        {
+          "id": "qwen",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "llama",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "deepseek",
+          "modalities": [
+            "text",
+            "reasoning"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "omniroute_catalog_plus_official_docs",
+      "sources": [
+        "https://docs.hyperbolic.ai/",
+        "https://hyperbolic.ai/pricing",
+        "https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/FREE_TIERS.md"
+      ],
+      "status": "active",
+      "access_via": [
+        "OmniRoute"
+      ]
+    },
+    {
+      "id": "longcat",
+      "name": "LongCat API",
+      "category": "first_party",
+      "country": "CN",
+      "country_flag": "🇨🇳",
+      "signup_url": "https://longcat.ai/platform/",
+      "docs_url": "https://longcat.ai/platform/docs/",
+      "pricing_url": "https://longcat.ai/platform/",
+      "base_url": "https://api.longcat.chat/openai/v1",
+      "auth": "api_key",
+      "account_required": true,
+      "card_required": null,
+      "identity_verification": "unknown",
+      "openai_compatible": true,
+      "free_tier_type": "free_trial_key",
+      "free_summary": "OmniRoute's current free catalog records a one-time LongCat free allocation; the LongCat platform provides a first-party OpenAI-compatible API.",
+      "quota_summary": "Current OmniRoute evidence records a one-time 10M-token free allocation; verify the live LongCat account quota before use.",
+      "privacy_summary": "Use the provider's current terms and API-key handling guidance.",
+      "notable_models": [
+        {
+          "id": "LongCat-2.0",
+          "modalities": [
+            "text"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "official_longcat_docs_plus_omniroute_audit",
+      "sources": [
+        "https://longcat.ai/platform/docs/",
+        "https://longcat.ai/platform/docs/api/chat",
+        "https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/FREE_TIERS.md"
+      ],
+      "status": "active",
+      "access_via": [
+        "OmniRoute"
+      ]
+    },
+    {
+      "id": "morph",
+      "name": "Morph",
+      "category": "inference_provider",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "signup_url": "https://www.morphllm.com/",
+      "docs_url": "https://www.morphllm.com/models",
+      "pricing_url": "https://www.morphllm.com/pricing",
+      "base_url": "https://api.morphllm.com/v1",
+      "auth": "api_key",
+      "account_required": true,
+      "card_required": null,
+      "identity_verification": "none",
+      "openai_compatible": true,
+      "free_tier_type": "monthly_credit",
+      "free_summary": "Morph publishes an OpenAI-compatible API with 200 free requests every month.",
+      "quota_summary": "200 requests/month free; hosted model usage after the free allowance is usage-priced.",
+      "privacy_summary": "Morph's EULA permits personal and commercial use within the free-tier limits; standard data handling applies.",
+      "notable_models": [
+        {
+          "id": "morph-kimik3",
+          "modalities": [
+            "text",
+            "image"
+          ]
+        },
+        {
+          "id": "morph-glm53flash",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "morph-dsv41flash",
+          "modalities": [
+            "text"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "official_morph_pricing_and_models",
+      "sources": [
+        "https://www.morphllm.com/pricing",
+        "https://www.morphllm.com/models",
+        "https://www.morphllm.com/eula"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "publicai",
+      "name": "Public AI Gateway",
+      "category": "inference_provider",
+      "country_flag": "🌐",
+      "signup_url": "https://platform.publicai.co/",
+      "docs_url": "https://platform.publicai.co/docs",
+      "pricing_url": "https://platform.publicai.co/support-us",
+      "base_url": "https://api.publicai.co/v1",
+      "auth": "api_key",
+      "account_required": true,
+      "card_required": null,
+      "identity_verification": "unknown",
+      "openai_compatible": true,
+      "free_tier_type": "recurring_free_tier",
+      "free_summary": "Public AI documents a Free tier with API access to public and sovereign models.",
+      "quota_summary": "The current Free tier is documented at 100 requests/minute; paid/Plus plans increase that limit.",
+      "privacy_summary": "Review Public AI's current terms and provider-specific model policies.",
+      "notable_models": [
+        {
+          "id": "swiss-ai/apertus-v1.5-8b",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "aisingapore/sea-lion",
+          "modalities": [
+            "text"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "official_publicai_docs",
+      "sources": [
+        "https://platform.publicai.co/docs",
+        "https://platform.publicai.co/api/~endpoints",
+        "https://platform.publicai.co/support-us"
+      ],
+      "status": "active"
     }
   ],
   "glossary": {
