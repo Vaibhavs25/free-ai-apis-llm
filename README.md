@@ -729,11 +729,13 @@ Google Antigravity currently lists these models as available on the **$0/month I
 
 ## OmniRoute model-level free catalog
 
-The machine-readable model catalog below is a snapshot of OmniRoute's hand-curated free-model baseline. It is an **access-path catalog**: the same underlying model can appear through multiple providers/pools, so record count is not the same as unique-model count.
+The current OmniRoute main branch contains **456 model records** in its hand-curated free-model source; **449 are non-discontinued** and **7 are explicitly marked discontinued**. The same source covers **79 active provider IDs** and **40 recurring pool keys**.
 
-f"**{len(omni_models.get('entries', []))} active records · {omni_models.get('counts', {}).get('unique_active_model_ids', 0)} unique active model IDs · {omni_models.get('counts', {}).get('active_providers', 0)} providers** · [full JSON](data/omniroute-free-models.json)",
+OmniRoute's current README separately advertises **455 free-tier entries**. That one-record difference is retained here as a source consistency note rather than silently choosing a number.
 
-OmniRoute's current published headline reports **516 models** in its resolved free-tier aggregation; the public release baseline imported here contains the reproducible static records available in the release source, while optional Radar can overlay newer entries.
+These are **access-path records**, not 449 unique underlying models: the same model can appear through multiple providers/pools. The machine-readable snapshot follows the current code-level catalog.
+
+Full snapshot: [data/omniroute-free-models.json](data/omniroute-free-models.json).
 
 ## Verification model
 
