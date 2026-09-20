@@ -10,6 +10,7 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "providers.json"
 OMNI = ROOT / "data" / "omniroute-free-catalog.json"
+ANTIGRAVITY = ROOT / "data" / "antigravity-free-models.json"
 
 REQUIRED = [
     "id", "name", "category", "signup_url", "docs_url", "base_url", "auth",
@@ -119,6 +120,23 @@ def main() -> int:
                 errors.append(f"OmniRoute entry #{idx}: invalid free_type")
             if entry.get("tos") not in {"ok","caution","ambiguous","avoid","unknown"}:
                 errors.append(f"OmniRoute entry #{idx}: invalid tos")
+
+    if ANTIGRAVITY.exists():
+        try:
+            antigravity = json.loads(ANTIGRAVITY.read_text(encoding="utf-8"))
+            models = antigravity.get("models")
+            if not isinstance(models, list) or not models:
+                errors.append("Antigravity catalog models must be a non-empty list")
+            for idx, model in enumerate(models or [], start=1):
+                if not isinstance(model, dict) or not isinstance(model.get("id"), str) or not model.get("id"):
+                    errors.append(f"Antigravity model #{idx} needs an id")
+            sources = antigravity.get("sources")
+            if not isinstance(sources, list) or not sources or any(not is_url(x) for x in sources):
+                errors.append("Antigravity catalog sources must be a non-empty list of http(s) URLs")
+            if not re.fullmatch(r"\\d{4}-\\d{2}-\\d{2}", str(antigravity.get("last_verified", ""))):
+                errors.append("Antigravity last_verified must be YYYY-MM-DD")
+        except Exception as exc:
+            errors.append(f"unable to parse Antigravity catalog: {exc}")
 
     # Guard against accidentally adding a duplicate source or empty display metadata.
     for provider in providers:
