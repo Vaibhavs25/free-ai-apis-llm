@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OmniRoute free catalog snapshot",
+  "type": "object",
+  "required": ["source", "release", "source_url", "curated_at", "entries"],
+  "properties": {
+    "source": {"type": "string"},
+    "release": {"type": "string"},
+    "source_url": {"type": "string", "format": "uri"},
+    "curated_at": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+    "audited_source_date": {"type": "string"},
+    "description": {"type": "string"},
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["omniroute_id", "free_type", "tos"],
+        "properties": {
+          "omniroute_id": {"type": "string", "minLength": 1},
+          "free_type": {"enum": ["recurring", "uncapped", "signup_credit", "keyless", "one_time"]},
+          "tos": {"enum": ["ok", "caution", "ambiguous", "avoid", "unknown"]},
+          "note": {"type": "string"}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": false
+}
