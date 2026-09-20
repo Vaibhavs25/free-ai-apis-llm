@@ -727,6 +727,14 @@ Google Antigravity currently lists these models as available on the **$0/month I
 
 **Sources:** [https://antigravity.google/docs/models/](https://antigravity.google/docs/models/); [https://antigravity.google/docs/plans](https://antigravity.google/docs/plans); [https://antigravity.google/pricing](https://antigravity.google/pricing)
 
+## OmniRoute model-level free catalog
+
+The machine-readable model catalog below is a snapshot of OmniRoute's hand-curated free-model baseline. It is an **access-path catalog**: the same underlying model can appear through multiple providers/pools, so record count is not the same as unique-model count.
+
+f"**{len(omni_models.get('entries', []))} active records · {omni_models.get('counts', {}).get('unique_active_model_ids', 0)} unique active model IDs · {omni_models.get('counts', {}).get('active_providers', 0)} providers** · [full JSON](data/omniroute-free-models.json)",
+
+OmniRoute's current published headline reports **516 models** in its resolved free-tier aggregation; the public release baseline imported here contains the reproducible static records available in the release source, while optional Radar can overlay newer entries.
+
 ## Verification model
 
 Every provider entry has a `last_verified` date and one or more source URLs. Free access is classified so a $0 recurring quota is not silently presented as the same thing as a time-limited promotion or a small trial credit.
