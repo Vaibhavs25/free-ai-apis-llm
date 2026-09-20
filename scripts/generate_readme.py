@@ -7,6 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "providers.json"
 RETIRED = ROOT / "data" / "retired.json"
+OMNI = ROOT / "data" / "omniroute-free-catalog.json"
 OUTPUT = ROOT / "README.md"
 
 ICON = {
@@ -95,6 +96,8 @@ def provider_block(p: dict) -> str:
 def main() -> None:
     data = json.loads(DATA.read_text(encoding="utf-8"))
     retired = json.loads(RETIRED.read_text(encoding="utf-8"))["services"] if RETIRED.exists() else []
+    omni = json.loads(OMNI.read_text(encoding="utf-8")) if OMNI.exists() else {"entries": []}
+    omni_entries = omni.get("entries", [])
     providers = data["providers"]
     first_party = sorted([p for p in providers if p["category"] == "first_party"], key=lambda x: x["name"].lower())
     inference = sorted([p for p in providers if p["category"] == "inference_provider"], key=lambda x: x["name"].lower())
@@ -149,7 +152,7 @@ def main() -> None:
         "The README is generated from `data/providers.json`. The structured dataset is the source of truth, so scripts, dashboards, MCP servers, CLIs, and other tools can consume it directly.",
         "",
         "```bash",
-        "curl -L https://raw.githubusercontent.com/Vaibhavs25/ai-api-atlas/main/data/providers.json",
+        "curl -L https://raw.githubusercontent.com/Vaibhavs25/free-ai-apis-llm/main/data/providers.json",
         "```",
         "",
         "Example fields include `account_required`, `card_required`, `free_tier_type`, `free_summary`, `quota_summary`, `openai_compatible`, `notable_models`, `last_verified`, and `sources`.",
@@ -199,6 +202,17 @@ def main() -> None:
         for p in omniroute_upstreams
     ])
     parts += [
+
+        "## OmniRoute free catalog",
+        "",
+        "OmniRoute's current free-tier catalog is tracked as a discovery snapshot. These provider IDs are not automatically promoted to detailed direct-API records; some are adapters, web tools, trials, regional offers, or terms-sensitive proxy paths.",
+        "",
+        f"**{len(omni_entries)} OmniRoute catalog provider IDs** · source: [{omni.get('source_url', 'OmniRoute')}]({omni.get('source_url', 'https://github.com/diegosouzapw/OmniRoute')})",
+        "",
+        "| OmniRoute provider | Free classification | Terms flag | Note |",
+        "|---|---|---|---|",
+        *[f"| {e['omniroute_id']} | {e['free_type']} | {e['tos']} | {e.get('note','')} |" for e in omni_entries],
+        "",
         "## Verification model",
         "",
         "Every provider entry has a `last_verified` date and one or more source URLs. Free access is classified so a $0 recurring quota is not silently presented as the same thing as a time-limited promotion or a small trial credit.",
