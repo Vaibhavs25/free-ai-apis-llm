@@ -1,0 +1,401 @@
+{
+  "source": "OmniRoute free model catalog",
+  "release": "v3.8.51",
+  "source_url": "https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/FREE_TIERS.md",
+  "curated_at": "2026-09-12",
+  "audited_source_date": "2026-09-03",
+  "generated_at": "2026-09-20",
+  "description": "Machine-readable snapshot of provider IDs appearing in OmniRoute's current free-tier catalog. This is a discovery layer: entries can be direct APIs, integrations, web tools, trials, regional offers, or terms-sensitive proxy paths.",
+  "entries": [
+    {
+      "omniroute_id": "agentrouter",
+      "free_type": "signup_credit",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "agnes",
+      "free_type": "uncapped",
+      "tos": "ok"
+    },
+    {
+      "omniroute_id": "agnes-cn",
+      "free_type": "uncapped",
+      "tos": "ok"
+    },
+    {
+      "omniroute_id": "agy",
+      "free_type": "keyless",
+      "tos": "avoid"
+    },
+    {
+      "omniroute_id": "ai21",
+      "free_type": "signup_credit",
+      "tos": "avoid"
+    },
+    {
+      "omniroute_id": "aihorde",
+      "free_type": "keyless",
+      "tos": "ok"
+    },
+    {
+      "omniroute_id": "ainative",
+      "free_type": "uncapped",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "aion",
+      "free_type": "uncapped",
+      "tos": "ok"
+    },
+    {
+      "omniroute_id": "api-airforce",
+      "free_type": "recurring",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "arcee-ai",
+      "free_type": "recurring",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "baichuan",
+      "free_type": "signup_credit",
+      "tos": "ambiguous"
+    },
+    {
+      "omniroute_id": "baidu",
+      "free_type": "uncapped",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "bazaarlink",
+      "free_type": "recurring",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "blackbox",
+      "free_type": "keyless",
+      "tos": "avoid"
+    },
+    {
+      "omniroute_id": "bluesminds",
+      "free_type": "recurring",
+      "tos": "ambiguous"
+    },
+    {
+      "omniroute_id": "bytez",
+      "free_type": "recurring",
+      "tos": "ambiguous"
+    },
+    {
+      "omniroute_id": "cerebras",
+      "free_type": "signup_credit",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "cloudflare-ai",
+      "free_type": "recurring",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "cohere",
+      "free_type": "one_time",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "coze",
+      "free_type": "recurring",
+      "tos": "avoid"
+    },
+    {
+      "omniroute_id": "deepinfra",
+      "free_type": "signup_credit",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "deepseek",
+      "free_type": "signup_credit",
+      "tos": "ok"
+    },
+    {
+      "omniroute_id": "doubao",
+      "free_type": "signup_credit",
+      "tos": "ambiguous"
+    },
+    {
+      "omniroute_id": "duckduckgo-web",
+      "free_type": "keyless",
+      "tos": "avoid"
+    },
+    {
+      "omniroute_id": "fireworks",
+      "free_type": "signup_credit",
+      "tos": "avoid"
+    },
+    {
+      "omniroute_id": "freemodel-dev",
+      "free_type": "signup_credit",
+      "tos": "unknown"
+    },
+    {
+      "omniroute_id": "friendliai",
+      "free_type": "keyless",
+      "tos": "avoid"
+    },
+    {
+      "omniroute_id": "gemini",
+      "free_type": "uncapped",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "glm",
+      "free_type": "uncapped",
+      "tos": "ok"
+    },
+    {
+      "omniroute_id": "glm-cn",
+      "free_type": "uncapped",
+      "tos": "ok"
+    },
+    {
+      "omniroute_id": "groq",
+      "free_type": "recurring",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "huggingchat",
+      "free_type": "one_time",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "huggingface",
+      "free_type": "one_time",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "hyperbolic",
+      "free_type": "signup_credit",
+      "tos": "ok"
+    },
+    {
+      "omniroute_id": "iflytek",
+      "free_type": "keyless",
+      "tos": "avoid"
+    },
+    {
+      "omniroute_id": "inference-net",
+      "free_type": "one_time",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "kilo-gateway",
+      "free_type": "uncapped",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "kiro",
+      "free_type": "one_time",
+      "tos": "avoid"
+    },
+    {
+      "omniroute_id": "liquid",
+      "free_type": "keyless",
+      "tos": "unknown"
+    },
+    {
+      "omniroute_id": "llm7",
+      "free_type": "recurring",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "longcat",
+      "free_type": "signup_credit",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "mistral",
+      "free_type": "one_time",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "modelscope",
+      "free_type": "recurring",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "monsterapi",
+      "free_type": "signup_credit",
+      "tos": "ambiguous"
+    },
+    {
+      "omniroute_id": "morph",
+      "free_type": "one_time",
+      "tos": "ok"
+    },
+    {
+      "omniroute_id": "muse-spark-web",
+      "free_type": "keyless",
+      "tos": "avoid"
+    },
+    {
+      "omniroute_id": "nara",
+      "free_type": "recurring",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "navy",
+      "free_type": "recurring",
+      "tos": "ok"
+    },
+    {
+      "omniroute_id": "nebius",
+      "free_type": "signup_credit",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "nlpcloud",
+      "free_type": "one_time",
+      "tos": "avoid"
+    },
+    {
+      "omniroute_id": "nous-research",
+      "free_type": "recurring",
+      "tos": "ambiguous"
+    },
+    {
+      "omniroute_id": "novita",
+      "free_type": "signup_credit",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "nscale",
+      "free_type": "signup_credit",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "nvidia",
+      "free_type": "signup_credit",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "ollama-cloud",
+      "free_type": "uncapped",
+      "tos": "ambiguous"
+    },
+    {
+      "omniroute_id": "opencode",
+      "free_type": "keyless",
+      "tos": "avoid"
+    },
+    {
+      "omniroute_id": "opencode-zen",
+      "free_type": "uncapped",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "openrouter",
+      "free_type": "recurring",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "ovhcloud",
+      "free_type": "keyless",
+      "tos": "ok"
+    },
+    {
+      "omniroute_id": "pollinations",
+      "free_type": "keyless",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "predibase",
+      "free_type": "signup_credit",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "publicai",
+      "free_type": "signup_credit",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "qoder",
+      "free_type": "signup_credit",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "reka",
+      "free_type": "one_time",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "requesty",
+      "free_type": "uncapped",
+      "tos": "ok"
+    },
+    {
+      "omniroute_id": "routeway",
+      "free_type": "uncapped",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "sambanova",
+      "free_type": "recurring",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "scaleway",
+      "free_type": "signup_credit",
+      "tos": "ok"
+    },
+    {
+      "omniroute_id": "sealion",
+      "free_type": "uncapped",
+      "tos": "ok"
+    },
+    {
+      "omniroute_id": "sensenova",
+      "free_type": "signup_credit",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "siliconflow",
+      "free_type": "uncapped",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "sparkdesk",
+      "free_type": "keyless",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "stepfun",
+      "free_type": "signup_credit",
+      "tos": "ok"
+    },
+    {
+      "omniroute_id": "t3-web",
+      "free_type": "recurring",
+      "tos": "avoid"
+    },
+    {
+      "omniroute_id": "tencent",
+      "free_type": "uncapped",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "uncloseai",
+      "free_type": "keyless",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "vertex",
+      "free_type": "signup_credit",
+      "tos": "caution"
+    },
+    {
+      "omniroute_id": "xkiro",
+      "free_type": "recurring",
+      "tos": "caution"
+    }
+  ]
+}
