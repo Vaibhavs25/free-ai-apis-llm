@@ -79,5 +79,6 @@
     "https://antigravity.google/docs/models/",
     "https://antigravity.google/docs/plans",
     "https://antigravity.google/pricing"
-  ]
+  ],
+  "access_mode": "Antigravity product (desktop app and CLI), not standalone model API"
 }
