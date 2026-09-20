@@ -14,10 +14,6 @@ Free AI changes fast: models disappear, quotas move, cards become required, and 
 
 [Browse providers](#provider-apis) · [Browse 489 free-model records](data/omniroute-free-models.json) · [Marketing kit](docs/MARKETING.md) · [Contribute](CONTRIBUTING.md)
 
-> A continuously maintained, developer-first directory of AI APIs, free tiers, models, limits, compatibility, and access requirements.
-
-[![Data](https://img.shields.io/badge/data-structured%20JSON-informational)](data/providers.json) [![Last verified](https://img.shields.io/badge/verified-2026--09--20-success)](data/providers.json) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-
 ## ⚡ What you get
 
 This directory deliberately includes **free APIs that require an account/login**. Login-required access is not treated as a worse class of API: it is tracked separately so you can filter by the setup you are willing to accept.
