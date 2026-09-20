@@ -8,7 +8,7 @@
 
 This directory deliberately includes **free APIs that require an account/login**. Login-required access is not treated as a worse class of API: it is tracked separately so you can filter by the setup you are willing to accept.
 
-**20 entries · 1 gateway · 3 OmniRoute upstreams · 13 account-required · 8 with no card documented · 12 card requirements unknown · 18 OpenAI-compatible · 14 recurring/model-free entries**
+**34 entries · 1 gateway · 15 OmniRoute upstreams · 26 account-required · 12 with no card documented · 22 card requirements unknown · 30 OpenAI-compatible · 21 recurring/model-free entries**
 
 | Provider | Free access | Account | Card | OpenAI-compatible | Quota |
 |---|---|---:|---:|---:|---|
@@ -32,6 +32,20 @@ This directory deliberately includes **free APIs that require an account/login**
 | [Kiro AI (OmniRoute upstream)](https://kiro.dev/) | 🔄 OmniRoute | — | — | — | Kiro Free currently lists 50 credits per monthly billing cycle; exact model/rate consumption depends on the request. OmniRoute may abstract provide… |
 | [OpenCode Free (OmniRoute upstream)](https://opencode.ai/) | 🆓 OmniRoute | — | ? | ✅ | Free-model availability and limits are model-specific and can change; current OpenCode documentation lists free models such as MiMo-V2.5 Free, Ling… |
 | [Pollinations (OmniRoute upstream)](https://pollinations.ai/) | 🔑 OmniRoute | — | ? | ✅ | No single stable quota is asserted here because Pollinations exposes different free/registered/key-based access paths and model-specific rules; use… |
+| [Nara Router](https://router.bynara.id/) | 📅 OmniRoute | ✅ | ? | ✅ | 7M tokens/day and 15 RPM on the currently published Free plan; the daily pool is shared across its free models. |
+| [xKiro](https://xkiro.com/) | 📅 OmniRoute | ✅ | — | ✅ | The current documentation exposes a daily account-level free-token allowance; exact limits are returned by the live usage endpoint. |
+| [API Airforce](https://api.airforce/) | 📅 OmniRoute | ✅ | ? | ✅ | Published Free plan limit: 1 RPM and 1,000 requests/day. |
+| [BazaarLink](https://bazaarlink.ai/en/docs) | 🆓 OmniRoute | ✅ | ? | ✅ | Free routing is subject to the provider's current RPM/daily cap; the live /v1/models catalog marks free models with a :free suffix. |
+| [NavyAI](https://api.navy/) | 📅 OmniRoute | ✅ | ? | ✅ | The current public plan page advertises 150K tokens/day and 20 RPM. |
+| [AI Horde](https://aihorde.net/register) | 🔑 OmniRoute | — | — | — | Availability and speed depend on the community worker pool rather than a fixed commercial token quota. |
+| [SEA-LION API](https://docs.sea-lion.ai/guides/inferencing/api) | 🧪 OmniRoute | ✅ | — | ✅ | 10 requests/minute on the free API; intended for POC use rather than production workloads. |
+| [Baidu Qianfan ERNIE](https://console.bce.baidu.com/qianfan/ais/console/apiKey) | ♾️ OmniRoute | ✅ | ? | ✅ | Free RPM/TPM quotas are console-controlled; use the current Qianfan console as the exact source of limits. |
+| [DeepSeek API](https://platform.deepseek.com/) | 🧪 OmniRoute | ✅ | — | ✅ | Current catalog evidence records 5M free tokens on signup for a limited period; confirm current account eligibility before relying on it. |
+| [Google Cloud Vertex AI](https://console.cloud.google.com/) | 🧪 OmniRoute | ✅ | ? | — | $300 new-customer cloud credit; one-time trial rather than a permanent API quota. |
+| [Hyperbolic](https://app.hyperbolic.ai/) | 🧪 OmniRoute | ✅ | ? | ✅ | Signup credit is one-time rather than a recurring free allowance; confirm the live account offer. |
+| [LongCat API](https://longcat.ai/platform/) | 🧪 OmniRoute | ✅ | ? | ✅ | Current OmniRoute evidence records a one-time 10M-token free allocation; verify the live LongCat account quota before use. |
+| [Morph](https://www.morphllm.com/) | 💵 login | ✅ | ? | ✅ | 200 requests/month free; hosted model usage after the free allowance is usage-priced. |
+| [Public AI Gateway](https://platform.publicai.co/) | 🔄 login | ✅ | ? | ✅ | The current Free tier is documented at 100 requests/minute; paid/Plus plans increase that limit. |
 
 ## 🧑‍💻 Free APIs that require login
 
@@ -52,13 +66,15 @@ These entries provide free API access after account creation and/or key issuance
 | [SiliconFlow](https://cloud.siliconflow.cn/account/ak) | Login + API key | Unknown | 🆓 SiliconFlow has model-specific free models whose calls are priced at zero after the account requirements are satisfied. |
 | [Ollama Cloud](https://ollama.com/settings/keys) | Login + API key | Unknown | 🔄 Ollama Cloud provides a free tier with session and weekly usage limits for supported cloud model families. |
 | [Aion Labs](https://www.aionlabs.ai/app/api-keys/) | Login + API key | Unknown | ♾️ Aion Labs advertises a permanent free tier for its text inference APIs. |
+| [Morph](https://www.morphllm.com/) | Login + API key | Unknown | 💵 Morph publishes an OpenAI-compatible API with 200 free requests every month. |
+| [Public AI Gateway](https://platform.publicai.co/) | Login + API key | Unknown | 🔄 Public AI documents a Free tier with API access to public and sovereign models. |
 
 ## 🔎 How to use the data
 
 The README is generated from `data/providers.json`. The structured dataset is the source of truth, so scripts, dashboards, MCP servers, CLIs, and other tools can consume it directly.
 
 ```bash
-curl -L https://raw.githubusercontent.com/Vaibhavs25/ai-api-atlas/main/data/providers.json
+curl -L https://raw.githubusercontent.com/Vaibhavs25/free-ai-apis-llm/main/data/providers.json
 ```
 
 Example fields include `account_required`, `card_required`, `free_tier_type`, `free_summary`, `quota_summary`, `openai_compatible`, `notable_models`, `last_verified`, and `sources`.
@@ -93,6 +109,20 @@ Aion Labs advertises a permanent free tier for its text inference APIs.
 
 **Last verified:** 2026-09-20 · [provider_page_reference sources](https://www.aionlabs.ai/)
 
+### ♾️ [Baidu Qianfan ERNIE](https://console.bce.baidu.com/qianfan/ais/console/apiKey) 🇨🇳
+
+**Access:** OmniRoute integration · **Card:** Unknown · **OpenAI-compatible:** ✅
+
+Baidu documents long-term free access for selected ERNIE services after real-name verification.
+
+**Quota:** Free RPM/TPM quotas are console-controlled; use the current Qianfan console as the exact source of limits.
+
+**Base URL:** `https://qianfan.baidubce.com/v2`
+
+**Models:** `ernie-speed-8k` (text); `ernie-speed-128k` (text); `ernie-lite-8k` (text)
+
+**Last verified:** 2026-09-20 · [official_provider_announcement sources](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/llf9l3kew)
+
 ### 🔄 [Cerebras Inference](https://cloud.cerebras.ai/) 🇺🇸
 
 **Access:** Login + API key · **Card:** Unknown · **OpenAI-compatible:** ✅
@@ -121,6 +151,34 @@ A Cohere account automatically receives a trial API key. Trial API usage is free
 
 **Last verified:** 2026-09-20 · [official_docs sources](https://docs.cohere.com/docs/cohere-faqs)
 
+### 🧪 [DeepSeek API](https://platform.deepseek.com/) 🇨🇳
+
+**Access:** OmniRoute integration · **Card:** No · **OpenAI-compatible:** ✅
+
+OmniRoute's current September 2026 catalog records a one-time free signup grant for the DeepSeek API.
+
+**Quota:** Current catalog evidence records 5M free tokens on signup for a limited period; confirm current account eligibility before relying on it.
+
+**Base URL:** `https://api.deepseek.com`
+
+**Models:** `deepseek-chat` (text); `deepseek-reasoner` (text, reasoning)
+
+**Last verified:** 2026-09-20 · [official_docs_plus_omniroute_audit sources](https://api-docs.deepseek.com/)
+
+### 🧪 [Google Cloud Vertex AI](https://console.cloud.google.com/) 🇺🇸
+
+**Access:** OmniRoute integration · **Card:** Unknown · **OpenAI-compatible:** —
+
+New Google Cloud customers can receive $300 in free credits that may be used for eligible Vertex AI workloads.
+
+**Quota:** $300 new-customer cloud credit; one-time trial rather than a permanent API quota.
+
+**Base URL:** `https://aiplatform.googleapis.com`
+
+**Models:** `gemini-flash-family` (text, image, audio, video); `gemma-family` (text)
+
+**Last verified:** 2026-09-20 · [official_google_cloud_docs sources](https://cloud.google.com/vertex-ai/generative-ai/docs/start/quickstarts)
+
 ### 🔄 [Google Gemini API](https://aistudio.google.com/app/apikey) 🇺🇸
 
 **Access:** Login + API key · **Card:** No · **OpenAI-compatible:** ✅
@@ -135,6 +193,20 @@ New Gemini API accounts start on the Free Tier with access to selected models wi
 
 **Last verified:** 2026-09-20 · [official_docs sources](https://ai.google.dev/gemini-api/docs/get-started)
 
+### 🧪 [LongCat API](https://longcat.ai/platform/) 🇨🇳
+
+**Access:** OmniRoute integration · **Card:** Unknown · **OpenAI-compatible:** ✅
+
+OmniRoute's current free catalog records a one-time LongCat free allocation; the LongCat platform provides a first-party OpenAI-compatible API.
+
+**Quota:** Current OmniRoute evidence records a one-time 10M-token free allocation; verify the live LongCat account quota before use.
+
+**Base URL:** `https://api.longcat.chat/openai/v1`
+
+**Models:** `LongCat-2.0` (text)
+
+**Last verified:** 2026-09-20 · [official_longcat_docs_plus_omniroute_audit sources](https://longcat.ai/platform/docs/)
+
 ### 🔄 [Mistral AI](https://console.mistral.ai/api-keys) 🇫🇷
 
 **Access:** Login + API key · **Card:** No · **OpenAI-compatible:** ✅
@@ -148,6 +220,20 @@ Mistral Studio starts in Free mode by default, with API access and limited inclu
 **Models:** `mistral-small-latest` (text); `mistral-large-latest` (text); `codestral-latest` (text, code); `ministral-3-14b-latest` (text, image)
 
 **Last verified:** 2026-09-20 · [official_docs sources](https://docs.mistral.ai/getting-started/quickstarts/developer/first-api-request)
+
+### 🧪 [SEA-LION API](https://docs.sea-lion.ai/guides/inferencing/api) 🇸🇬
+
+**Access:** OmniRoute integration · **Card:** No · **OpenAI-compatible:** ✅
+
+AI Singapore provides a free SEA-LION API for proof-of-concept development and testing.
+
+**Quota:** 10 requests/minute on the free API; intended for POC use rather than production workloads.
+
+**Base URL:** `https://api.sea-lion.ai/v1`
+
+**Models:** `aisingapore/Llama-SEA-LION-v3.5-70B-R` (text); `aisingapore/Qwen-SEA-LION-v4.5-27B-IT` (text)
+
+**Last verified:** 2026-09-20 · [official_provider_docs sources](https://docs.sea-lion.ai/guides/inferencing/api)
 
 ### 🆓 [Z AI (Zhipu AI)](https://open.bigmodel.cn/usercenter/apikeys) 🇨🇳
 
@@ -166,6 +252,48 @@ Z AI publishes selected models at Free pricing, including GLM-4.7-Flash and othe
 ## Inference providers and gateways
 
 These platforms host or expose models from multiple sources.
+
+### 🔑 [AI Horde](https://aihorde.net/register) 🌐
+
+**Access:** OmniRoute integration · **Card:** No · **OpenAI-compatible:** —
+
+AI Horde provides community-backed AI inference that is free of charge, with anonymous use supported.
+
+**Quota:** Availability and speed depend on the community worker pool rather than a fixed commercial token quota.
+
+**Base URL:** `https://aihorde.net/api/v2`
+
+**Models:** `aphrodite/TheDrummer/Cydonia-24B-v4.3` (text); `aphrodite/TheDrummer/Skyfall-31B-v4.2` (text)
+
+**Last verified:** 2026-09-20 · [official_site_plus_omniroute_audit sources](https://aihorde.net/api)
+
+### 📅 [API Airforce](https://api.airforce/) 🌐
+
+**Access:** OmniRoute integration · **Card:** Unknown · **OpenAI-compatible:** ✅
+
+API Airforce documents a Free plan for API experimentation.
+
+**Quota:** Published Free plan limit: 1 RPM and 1,000 requests/day.
+
+**Base URL:** `https://api.airforce`
+
+**Models:** `deepseek/deepseek-v3` (text); `qwen/qwen3-32b` (text); `google/gemini-2.5-flash` (text, image)
+
+**Last verified:** 2026-09-20 · [official_docs sources](https://api.airforce/docs/quickstart/)
+
+### 🆓 [BazaarLink](https://bazaarlink.ai/en/docs) 🌐
+
+**Access:** OmniRoute integration · **Card:** Unknown · **OpenAI-compatible:** ✅
+
+BazaarLink exposes an `auto:free` route and publishes a live set of free models.
+
+**Quota:** Free routing is subject to the provider's current RPM/daily cap; the live /v1/models catalog marks free models with a :free suffix.
+
+**Base URL:** `https://api.bazaarlink.ai/v1`
+
+**Models:** `auto:free` (text); `claude-sonnet-4.6` (text); `gpt-5.4-mini` (text)
+
+**Last verified:** 2026-09-20 · [official_docs_plus_omniroute_audit sources](https://bazaarlink.ai/en/docs)
 
 ### 📅 [Cloudflare Workers AI](https://dash.cloudflare.com/) 🇺🇸
 
@@ -208,6 +336,20 @@ Free Hugging Face users receive $0.10/month in Inference Provider credits, subje
 **Models:** `meta-llama/Llama-3.1-8B-Instruct` (text); `google/gemma-3-4b-it` (text, image); `microsoft/phi-4` (text); `Qwen/Qwen2.5-Coder-7B-Instruct` (text, code)
 
 **Last verified:** 2026-09-20 · [official_docs sources](https://huggingface.co/docs/inference-providers)
+
+### 🧪 [Hyperbolic](https://app.hyperbolic.ai/) 🌐
+
+**Access:** OmniRoute integration · **Card:** Unknown · **OpenAI-compatible:** ✅
+
+OmniRoute's current catalog records a signup credit for Hyperbolic API experimentation.
+
+**Quota:** Signup credit is one-time rather than a recurring free allowance; confirm the live account offer.
+
+**Base URL:** `https://api.hyperbolic.xyz/v1`
+
+**Models:** `qwen` (text); `llama` (text); `deepseek` (text, reasoning)
+
+**Last verified:** 2026-09-20 · [omniroute_catalog_plus_official_docs sources](https://docs.hyperbolic.ai/)
 
 ### 🆓 [Kilo Code Gateway](https://app.kilo.ai/profile) 🇺🇸
 
@@ -264,6 +406,48 @@ ModelScope provides free API-Inference for registered users under published usag
 **Models:** `Qwen/Qwen3.5-35B-A3B` (text); `Qwen/Qwen3.5-27B` (text); `Qwen/Qwen3.6-35B-A3B` (text)
 
 **Last verified:** 2026-09-20 · [provider_docs sources](https://modelscope.cn/docs/model-service/API-Inference/intro)
+
+### 💵 [Morph](https://www.morphllm.com/) 🇺🇸
+
+**Access:** Login + API key · **Card:** Unknown · **OpenAI-compatible:** ✅
+
+Morph publishes an OpenAI-compatible API with 200 free requests every month.
+
+**Quota:** 200 requests/month free; hosted model usage after the free allowance is usage-priced.
+
+**Base URL:** `https://api.morphllm.com/v1`
+
+**Models:** `morph-kimik3` (text, image); `morph-glm53flash` (text); `morph-dsv41flash` (text)
+
+**Last verified:** 2026-09-20 · [official_morph_pricing_and_models sources](https://www.morphllm.com/models)
+
+### 📅 [Nara Router](https://router.bynara.id/) 🇮🇩
+
+**Access:** OmniRoute integration · **Card:** Unknown · **OpenAI-compatible:** ✅
+
+Nara currently publishes a Free plan with a daily token allowance and no paid subscription required for the free path.
+
+**Quota:** 7M tokens/day and 15 RPM on the currently published Free plan; the daily pool is shared across its free models.
+
+**Base URL:** `https://router.bynara.id/api`
+
+**Models:** `agnes-2.0-flash` (text); `laguna-s-2.1` (text); `mistral-large` (text); `qwen3.8-27b` (text)
+
+**Last verified:** 2026-09-20 · [official_provider_page_plus_omniroute_audit sources](https://router.bynara.id/docs)
+
+### 📅 [NavyAI](https://api.navy/) 🌐
+
+**Access:** OmniRoute integration · **Card:** Unknown · **OpenAI-compatible:** ✅
+
+NavyAI currently advertises a $0 Free plan for API use.
+
+**Quota:** The current public plan page advertises 150K tokens/day and 20 RPM.
+
+**Base URL:** `https://api.navy/v1`
+
+**Models:** `shared-free-pool` (text)
+
+**Last verified:** 2026-09-20 · [official_provider_page_plus_omniroute_audit sources](https://api.navy/)
 
 ### 🔄 [Ollama Cloud](https://ollama.com/settings/keys) 🇺🇸
 
@@ -335,6 +519,20 @@ OmniRoute documents Pollinations as a no-key free upstream. Pollinations also ma
 
 **Last verified:** 2026-09-20 · [official_pollinations_docs_and_omniroute_provider_guide sources](https://github.com/pollinations/pollinations/blob/main/APIDOCS.md)
 
+### 🔄 [Public AI Gateway](https://platform.publicai.co/) 🌐
+
+**Access:** Login + API key · **Card:** Unknown · **OpenAI-compatible:** ✅
+
+Public AI documents a Free tier with API access to public and sovereign models.
+
+**Quota:** The current Free tier is documented at 100 requests/minute; paid/Plus plans increase that limit.
+
+**Base URL:** `https://api.publicai.co/v1`
+
+**Models:** `swiss-ai/apertus-v1.5-8b` (text); `aisingapore/sea-lion` (text)
+
+**Last verified:** 2026-09-20 · [official_publicai_docs sources](https://platform.publicai.co/docs)
+
 ### 🆓 [SiliconFlow](https://cloud.siliconflow.cn/account/ak) 🇨🇳
 
 **Access:** Login + API key · **Card:** Unknown · **OpenAI-compatible:** ✅
@@ -348,6 +546,20 @@ SiliconFlow has model-specific free models whose calls are priced at zero after 
 **Models:** `Qwen/Qwen3-8B` (text); `Hunyuan-MT-7B` (text); `Qwen3.5-4B` (text); `THUDM/GLM-4-9B-0414` (text)
 
 **Last verified:** 2026-09-20 · [provider_docs sources](https://api-docs.siliconflow.cn/)
+
+### 📅 [xKiro](https://xkiro.com/) 🌐
+
+**Access:** OmniRoute integration · **Card:** No · **OpenAI-compatible:** ✅
+
+xKiro documents a Free plan with access to free-tier models on free accounts.
+
+**Quota:** The current documentation exposes a daily account-level free-token allowance; exact limits are returned by the live usage endpoint.
+
+**Base URL:** `https://api.xkiro.com/v1`
+
+**Models:** `qwen/qwen3.5-flash:free` (text, image); `minimax/minimax-m2.7:free` (text); `mistralai/mistral-small-2603` (text)
+
+**Last verified:** 2026-09-20 · [official_xkiro_docs_plus_omniroute_audit sources](https://docs.xkiro.com/guides/pricing/)
 
 ## Gateways and routers
 
@@ -379,6 +591,105 @@ These are provider integrations that OmniRoute documents as free upstream paths.
 | [Kiro AI (OmniRoute upstream)](https://kiro.dev/) | ✅ | 🔄 recurring_free_tier | not_catalogued_as_standalone_public_api_here |
 | [OpenCode Free (OmniRoute upstream)](https://opencode.ai/) | ✅ | 🆓 free_models | authenticated_direct_access_documented_separately |
 | [Pollinations (OmniRoute upstream)](https://pollinations.ai/) | ✅ | 🔑 keyless_or_free_token | openai_compatible_api_documented |
+| [Nara Router](https://router.bynara.id/) | ✅ | 📅 daily_free_allocation | see provider docs |
+| [xKiro](https://xkiro.com/) | ✅ | 📅 daily_free_allocation | Direct API documented; free models are subject to account-level allowance. |
+| [API Airforce](https://api.airforce/) | ✅ | 📅 daily_free_allocation | see provider docs |
+| [BazaarLink](https://bazaarlink.ai/en/docs) | ✅ | 🆓 free_pool | see provider docs |
+| [NavyAI](https://api.navy/) | ✅ | 📅 daily_free_allocation | see provider docs |
+| [AI Horde](https://aihorde.net/register) | ✅ | 🔑 keyless_or_free_token | Native Horde API; not an OpenAI-compatible direct endpoint. |
+| [SEA-LION API](https://docs.sea-lion.ai/guides/inferencing/api) | ✅ | 🧪 free_trial_key | see provider docs |
+| [Baidu Qianfan ERNIE](https://console.bce.baidu.com/qianfan/ais/console/apiKey) | ✅ | ♾️ permanent_free_tier | see provider docs |
+| [DeepSeek API](https://platform.deepseek.com/) | ✅ | 🧪 free_trial_key | see provider docs |
+| [Google Cloud Vertex AI](https://console.cloud.google.com/) | ✅ | 🧪 free_trial_key | see provider docs |
+| [Hyperbolic](https://app.hyperbolic.ai/) | ✅ | 🧪 free_trial_key | see provider docs |
+| [LongCat API](https://longcat.ai/platform/) | ✅ | 🧪 free_trial_key | see provider docs |
+## OmniRoute free catalog
+
+OmniRoute's current free-tier catalog is tracked as a discovery snapshot. These provider IDs are not automatically promoted to detailed direct-API records; some are adapters, web tools, trials, regional offers, or terms-sensitive proxy paths.
+
+**78 OmniRoute catalog provider IDs** · source: [https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/FREE_TIERS.md](https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/FREE_TIERS.md)
+
+| OmniRoute provider | Free classification | Terms flag | Note |
+|---|---|---|---|
+| agentrouter | signup_credit | caution |  |
+| agnes | uncapped | ok |  |
+| agnes-cn | uncapped | ok |  |
+| agy | keyless | avoid |  |
+| ai21 | signup_credit | avoid |  |
+| aihorde | keyless | ok |  |
+| ainative | uncapped | caution |  |
+| aion | uncapped | ok |  |
+| api-airforce | recurring | caution |  |
+| arcee-ai | recurring | caution |  |
+| baichuan | signup_credit | ambiguous |  |
+| baidu | uncapped | caution |  |
+| bazaarlink | recurring | caution |  |
+| blackbox | keyless | avoid |  |
+| bluesminds | recurring | ambiguous |  |
+| bytez | recurring | ambiguous |  |
+| cerebras | signup_credit | caution |  |
+| cloudflare-ai | recurring | caution |  |
+| cohere | one_time | caution |  |
+| coze | recurring | avoid |  |
+| deepinfra | signup_credit | caution |  |
+| deepseek | signup_credit | ok |  |
+| doubao | signup_credit | ambiguous |  |
+| duckduckgo-web | keyless | avoid |  |
+| fireworks | signup_credit | avoid |  |
+| freemodel-dev | signup_credit | unknown |  |
+| friendliai | keyless | avoid |  |
+| gemini | uncapped | caution |  |
+| glm | uncapped | ok |  |
+| glm-cn | uncapped | ok |  |
+| groq | recurring | caution |  |
+| huggingchat | one_time | caution |  |
+| huggingface | one_time | caution |  |
+| hyperbolic | signup_credit | ok |  |
+| iflytek | keyless | avoid |  |
+| inference-net | one_time | caution |  |
+| kilo-gateway | uncapped | caution |  |
+| kiro | one_time | avoid |  |
+| liquid | keyless | unknown |  |
+| llm7 | recurring | caution |  |
+| longcat | signup_credit | caution |  |
+| mistral | one_time | caution |  |
+| modelscope | recurring | caution |  |
+| monsterapi | signup_credit | ambiguous |  |
+| morph | one_time | ok |  |
+| muse-spark-web | keyless | avoid |  |
+| nara | recurring | caution |  |
+| navy | recurring | ok |  |
+| nebius | signup_credit | caution |  |
+| nlpcloud | one_time | avoid |  |
+| nous-research | recurring | ambiguous |  |
+| novita | signup_credit | caution |  |
+| nscale | signup_credit | caution |  |
+| nvidia | signup_credit | caution |  |
+| ollama-cloud | uncapped | ambiguous |  |
+| opencode | keyless | avoid |  |
+| opencode-zen | uncapped | caution |  |
+| openrouter | recurring | caution |  |
+| ovhcloud | keyless | ok |  |
+| pollinations | keyless | caution |  |
+| predibase | signup_credit | caution |  |
+| publicai | signup_credit | caution |  |
+| qoder | signup_credit | caution |  |
+| reka | one_time | caution |  |
+| requesty | uncapped | ok |  |
+| routeway | uncapped | caution |  |
+| sambanova | recurring | caution |  |
+| scaleway | signup_credit | ok |  |
+| sealion | uncapped | ok |  |
+| sensenova | signup_credit | caution |  |
+| siliconflow | uncapped | caution |  |
+| sparkdesk | keyless | caution |  |
+| stepfun | signup_credit | ok |  |
+| t3-web | recurring | avoid |  |
+| tencent | uncapped | caution |  |
+| uncloseai | keyless | caution |  |
+| vertex | signup_credit | caution |  |
+| xkiro | recurring | caution |  |
+
 ## Verification model
 
 Every provider entry has a `last_verified` date and one or more source URLs. Free access is classified so a $0 recurring quota is not silently presented as the same thing as a time-limited promotion or a small trial credit.
