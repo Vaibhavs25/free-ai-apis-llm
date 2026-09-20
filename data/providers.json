@@ -681,7 +681,7 @@
     },
     {
       "id": "kilo-code",
-      "name": "Kilo Code Gateway",
+      "name": "Kilo Code",
       "category": "inference_provider",
       "country": "US",
       "country_flag": "🇺🇸",
@@ -733,7 +733,10 @@
         "https://kilo.ai/docs/gateway/authentication",
         "https://kilo.ai/docs/gateway/models-and-providers"
       ],
-      "status": "active_dynamic_catalog"
+      "status": "active_dynamic_catalog",
+      "reference_sources": [
+        "https://github.com/mnfst/awesome-free-llm-apis"
+      ]
     },
     {
       "id": "llm7",
@@ -1836,70 +1839,6 @@
         "https://platform.publicai.co/support-us"
       ],
       "status": "active"
-    },
-    {
-      "id": "kilo-code",
-      "name": "Kilo Code",
-      "category": "inference_provider",
-      "country": "US",
-      "country_flag": "🇺🇸",
-      "signup_url": "https://app.kilo.ai/profile",
-      "docs_url": "https://kilo.ai/docs/gateway/authentication",
-      "pricing_url": "https://kilo.ai/docs/gateway/models-and-providers",
-      "base_url": "https://api.kilo.ai/api/gateway",
-      "auth": "optional_api_key",
-      "account_required": false,
-      "card_required": null,
-      "identity_verification": "unknown",
-      "openai_compatible": true,
-      "free_tier_type": "free_pool",
-      "free_summary": "Kilo Code exposes a free model pool and an automatic free router; the free gateway path does not require an API key.",
-      "quota_summary": "The reference snapshot lists 200 requests/hour per IP for the free pool; the free model roster changes frequently.",
-      "privacy_summary": "Kilo warns that some free upstream providers may log prompts and outputs; upstream-specific restrictions apply.",
-      "region_notes": "Free-pool membership and model availability can change.",
-      "notable_models": [
-        {
-          "id": "kilo-auto/free",
-          "modalities": [
-            "text"
-          ],
-          "rate_limit": "200 req/hr (reference snapshot)"
-        },
-        {
-          "id": "nvidia/nemotron-3-super-120b-a12b:free",
-          "modalities": [
-            "text"
-          ],
-          "rate_limit": "200 req/hr (reference snapshot)"
-        },
-        {
-          "id": "stepfun/step-3.7-flash:free",
-          "modalities": [
-            "text",
-            "image"
-          ],
-          "rate_limit": "200 req/hr (reference snapshot)"
-        },
-        {
-          "id": "poolside/laguna-s-2.1:free",
-          "modalities": [
-            "text",
-            "code"
-          ],
-          "rate_limit": "200 req/hr (reference snapshot)"
-        }
-      ],
-      "last_verified": "2026-09-20",
-      "verification": "official_kilo_docs_plus_reference_crosscheck",
-      "sources": [
-        "https://kilo.ai/docs/gateway/authentication",
-        "https://kilo.ai/docs/gateway/models-and-providers",
-        "https://github.com/mnfst/awesome-free-llm-apis/blob/main/data.json"
-      ],
-      "status": "active_dynamic_catalog",
-      "reference_sources": [
-        "https://github.com/mnfst/awesome-free-llm-apis"
-      ]
     },
     {
       "id": "nvidia-nim",
