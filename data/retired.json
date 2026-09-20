@@ -1,0 +1,10 @@
+{
+  "services": [
+    {
+      "name": "GitHub Models",
+      "retired_on": "2026-07-30",
+      "reason": "GitHub states that the playground, model catalog, inference API, and BYOK were fully retired on this date.",
+      "source": "https://docs.github.com/en/github-models"
+    }
+  ]
+}

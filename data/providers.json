@@ -1,0 +1,1185 @@
+{
+  "schema_version": "1.0.0",
+  "directory": "AI API Atlas",
+  "last_updated": "2026-09-20",
+  "scope": {
+    "includes": [
+      "API-accessible AI inference with a recurring or currently usable free allocation",
+      "Account-required free APIs and free model pools",
+      "Free monthly credits where the provider explicitly grants them to free accounts",
+      "Anonymous/keyless free APIs when they are useful to developers"
+    ],
+    "excludes": [
+      "Chat-only/web-only products with no developer API",
+      "Expired or clearly discontinued free programs",
+      "Promotions whose free allocation is already known to be over",
+      "Providers where a free API claim cannot be traced to a provider or primary technical source"
+    ]
+  },
+  "providers": [
+    {
+      "id": "google-gemini",
+      "name": "Google Gemini API",
+      "category": "first_party",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "signup_url": "https://aistudio.google.com/app/apikey",
+      "docs_url": "https://ai.google.dev/gemini-api/docs/get-started",
+      "pricing_url": "https://ai.google.dev/gemini-api/docs/billing",
+      "base_url": "https://generativelanguage.googleapis.com/v1beta",
+      "auth": "api_key",
+      "account_required": true,
+      "card_required": false,
+      "identity_verification": "unknown",
+      "openai_compatible": true,
+      "free_tier_type": "recurring_free_tier",
+      "free_summary": "New Gemini API accounts start on the Free Tier with access to selected models within their model-specific free-tier limits.",
+      "quota_summary": "Model-specific quotas; current exact limits are shown in the account/AI Studio quota view.",
+      "privacy_summary": "Free-tier data use depends on Google service/data terms and region.",
+      "region_notes": "Availability and data terms vary by region; check Google's available-regions and terms pages.",
+      "notable_models": [
+        {
+          "id": "gemini-2.5-flash",
+          "modalities": [
+            "text",
+            "image",
+            "audio",
+            "video"
+          ]
+        },
+        {
+          "id": "gemini-2.5-flash-lite",
+          "modalities": [
+            "text",
+            "image",
+            "audio",
+            "video"
+          ]
+        },
+        {
+          "id": "gemini-2.5-pro",
+          "modalities": [
+            "text",
+            "image",
+            "audio",
+            "video"
+          ]
+        },
+        {
+          "id": "gemma-4-31b-it",
+          "modalities": [
+            "text"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "official_docs",
+      "sources": [
+        "https://ai.google.dev/gemini-api/docs/api-key",
+        "https://ai.google.dev/gemini-api/docs/billing",
+        "https://ai.google.dev/gemini-api/docs/get-started"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "groq",
+      "name": "Groq",
+      "category": "inference_provider",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "signup_url": "https://console.groq.com/keys",
+      "docs_url": "https://console.groq.com/docs/quickstart",
+      "pricing_url": "https://console.groq.com/docs/billing-faqs",
+      "base_url": "https://api.groq.com/openai/v1",
+      "auth": "api_key",
+      "account_required": true,
+      "card_required": false,
+      "identity_verification": "unknown",
+      "openai_compatible": true,
+      "free_tier_type": "recurring_free_tier",
+      "free_summary": "Groq exposes a Free tier with model-specific request/token limits; payment information is needed only when upgrading to paid usage.",
+      "quota_summary": "Limits are model and organization specific; the public rate-limit page lists current model ceilings and response headers expose remaining quota.",
+      "privacy_summary": "Check Groq's current privacy and data-use terms before sending sensitive prompts.",
+      "region_notes": "Service availability may vary by jurisdiction.",
+      "notable_models": [
+        {
+          "id": "openai/gpt-oss-120b",
+          "modalities": [
+            "text"
+          ],
+          "rate_limit": "30 RPM, 1,000 RPD; 8K TPM on the published table"
+        },
+        {
+          "id": "openai/gpt-oss-20b",
+          "modalities": [
+            "text"
+          ],
+          "rate_limit": "30 RPM, 1,000 RPD; 8K TPM on the published table"
+        },
+        {
+          "id": "groq/compound",
+          "modalities": [
+            "text"
+          ],
+          "rate_limit": "30 RPM, 250 RPD on the published table"
+        },
+        {
+          "id": "whisper-large-v3",
+          "modalities": [
+            "audio"
+          ],
+          "rate_limit": "20 RPM, 2,000 RPD on the published table"
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "official_docs",
+      "sources": [
+        "https://console.groq.com/docs/billing-faqs",
+        "https://console.groq.com/docs/rate-limits",
+        "https://console.groq.com/docs/quickstart"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cerebras",
+      "name": "Cerebras Inference",
+      "category": "first_party",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "signup_url": "https://cloud.cerebras.ai/",
+      "docs_url": "https://inference-docs.cerebras.ai/quickstart",
+      "pricing_url": "https://inference-docs.cerebras.ai/support/pricing",
+      "base_url": "https://api.cerebras.ai/v1",
+      "auth": "api_key",
+      "account_required": true,
+      "card_required": null,
+      "identity_verification": "unknown",
+      "openai_compatible": true,
+      "free_tier_type": "recurring_free_tier",
+      "free_summary": "Cerebras offers a $0 Free tier with lower rate limits and community support.",
+      "quota_summary": "Exact free-tier limits are account/service dependent; the provider publishes that the Free tier has lower rate limits.",
+      "privacy_summary": "Review Cerebras terms before production use.",
+      "region_notes": "Availability may vary.",
+      "notable_models": [
+        {
+          "id": "gpt-oss-120b",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "llama-4-scout-17b-16e-instruct",
+          "modalities": [
+            "text",
+            "image"
+          ]
+        },
+        {
+          "id": "llama3.1-8b",
+          "modalities": [
+            "text"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "official_docs",
+      "sources": [
+        "https://inference-docs.cerebras.ai/support/pricing",
+        "https://inference-docs.cerebras.ai/quickstart"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "mistral",
+      "name": "Mistral AI",
+      "category": "first_party",
+      "country": "FR",
+      "country_flag": "🇫🇷",
+      "signup_url": "https://console.mistral.ai/api-keys",
+      "docs_url": "https://docs.mistral.ai/getting-started/quickstarts/developer/first-api-request",
+      "pricing_url": "https://mistral.ai/pricing",
+      "base_url": "https://api.mistral.ai/v1",
+      "auth": "api_key",
+      "account_required": true,
+      "card_required": false,
+      "identity_verification": "unknown",
+      "openai_compatible": true,
+      "free_tier_type": "recurring_free_tier",
+      "free_summary": "Mistral Studio starts in Free mode by default, with API access and limited included usage; no credit card is required to activate Studio.",
+      "quota_summary": "Monthly included usage and limits are shown in the account Limits/Subscription views.",
+      "privacy_summary": "Free-mode inputs and outputs may be subject to Mistral's data-use terms; review current controls before sensitive use.",
+      "region_notes": "Global plan details and availability may vary.",
+      "notable_models": [
+        {
+          "id": "mistral-small-latest",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "mistral-large-latest",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "codestral-latest",
+          "modalities": [
+            "text",
+            "code"
+          ]
+        },
+        {
+          "id": "ministral-3-14b-latest",
+          "modalities": [
+            "text",
+            "image"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "official_docs",
+      "sources": [
+        "https://docs.mistral.ai/getting-started/quickstarts/studio/activate-and-generate-api-key",
+        "https://docs.mistral.ai/getting-started/quickstarts/developer/first-api-request",
+        "https://docs.mistral.ai/admin/billing-usage/usage-limits"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cohere",
+      "name": "Cohere",
+      "category": "first_party",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "signup_url": "https://dashboard.cohere.com/api-keys",
+      "docs_url": "https://docs.cohere.com/docs/cohere-faqs",
+      "pricing_url": "https://docs.cohere.com/docs/how-does-cohere-pricing-work",
+      "base_url": "https://api.cohere.com/v2",
+      "auth": "api_key",
+      "account_required": true,
+      "card_required": null,
+      "identity_verification": "unknown",
+      "openai_compatible": false,
+      "free_tier_type": "free_trial_key",
+      "free_summary": "A Cohere account automatically receives a trial API key. Trial API usage is free but limited.",
+      "quota_summary": "The documented monthly trial limit is 1,000 calls; endpoint-specific limits also apply.",
+      "privacy_summary": "Trial access is intended for testing/prototyping; check current terms for commercial and production use.",
+      "region_notes": "Availability may vary.",
+      "notable_models": [
+        {
+          "id": "command-a-03-2025",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "command-a-vision-07-2025",
+          "modalities": [
+            "text",
+            "image"
+          ]
+        },
+        {
+          "id": "embed-v4.0",
+          "modalities": [
+            "embedding"
+          ]
+        },
+        {
+          "id": "rerank-v3.5",
+          "modalities": [
+            "reranking"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "official_docs",
+      "sources": [
+        "https://docs.cohere.com/docs/cohere-faqs",
+        "https://docs.cohere.com/docs/cohere-and-langchain",
+        "https://docs.cohere.com/reference/errors"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "openrouter",
+      "name": "OpenRouter",
+      "category": "inference_provider",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "signup_url": "https://openrouter.ai/keys",
+      "docs_url": "https://openrouter.ai/docs",
+      "pricing_url": "https://openrouter.ai/pricing",
+      "base_url": "https://openrouter.ai/api/v1",
+      "auth": "api_key",
+      "account_required": true,
+      "card_required": false,
+      "identity_verification": "unknown",
+      "openai_compatible": true,
+      "free_tier_type": "free_models",
+      "free_summary": "OpenRouter's Free plan provides API access to 25+ free models and currently lists a 50 requests/day rate limit.",
+      "quota_summary": "50 requests/day on the Free plan; free model availability changes frequently.",
+      "privacy_summary": "Provider routing and model/provider policies vary; review the selected provider's data policy.",
+      "region_notes": "Model/provider availability may vary.",
+      "notable_models": [
+        {
+          "id": "openrouter/free",
+          "modalities": [
+            "text",
+            "image"
+          ],
+          "rate_limit": "50 RPD on Free plan"
+        },
+        {
+          "id": "nvidia/nemotron-3-super-120b-a12b:free",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "openai/gpt-oss-20b:free",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "google/gemma-4-31b-it:free",
+          "modalities": [
+            "text",
+            "image"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "official_docs",
+      "sources": [
+        "https://openrouter.ai/pricing",
+        "https://openrouter.ai/openrouter/free",
+        "https://openrouter.ai/collections/free-models"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cloudflare-workers-ai",
+      "name": "Cloudflare Workers AI",
+      "category": "inference_provider",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "signup_url": "https://dash.cloudflare.com/",
+      "docs_url": "https://developers.cloudflare.com/workers-ai/get-started/rest-api/",
+      "pricing_url": "https://developers.cloudflare.com/workers-ai/platform/pricing/",
+      "base_url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/run",
+      "auth": "api_token_and_account_id",
+      "account_required": true,
+      "card_required": null,
+      "identity_verification": "unknown",
+      "openai_compatible": true,
+      "free_tier_type": "daily_free_allocation",
+      "free_summary": "Workers AI is available on Cloudflare's Free plan with 10,000 Neurons/day at no charge.",
+      "quota_summary": "10,000 Neurons/day shared across Workers AI usage; limits reset daily at 00:00 UTC.",
+      "privacy_summary": "Review Cloudflare's data processing terms for the workload and region.",
+      "region_notes": "Global network; account eligibility and product availability may vary.",
+      "notable_models": [
+        {
+          "id": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "@cf/meta/llama-4-scout-17b-16e-instruct",
+          "modalities": [
+            "text",
+            "image"
+          ]
+        },
+        {
+          "id": "@cf/google/gemma-4-26b-a4b-it",
+          "modalities": [
+            "text",
+            "image"
+          ]
+        },
+        {
+          "id": "@cf/openai/gpt-oss-120b",
+          "modalities": [
+            "text"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "official_docs",
+      "sources": [
+        "https://developers.cloudflare.com/workers-ai/",
+        "https://developers.cloudflare.com/workers-ai/get-started/rest-api/",
+        "https://developers.cloudflare.com/workers-ai/platform/pricing/"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "hugging-face-inference-providers",
+      "name": "Hugging Face Inference Providers",
+      "category": "inference_provider",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "signup_url": "https://huggingface.co/settings/tokens",
+      "docs_url": "https://huggingface.co/docs/inference-providers",
+      "pricing_url": "https://huggingface.co/docs/inference-providers/pricing",
+      "base_url": "https://router.huggingface.co/v1",
+      "auth": "hf_token",
+      "account_required": true,
+      "card_required": null,
+      "identity_verification": "unknown",
+      "openai_compatible": true,
+      "free_tier_type": "monthly_credit",
+      "free_summary": "Free Hugging Face users receive $0.10/month in Inference Provider credits, subject to change.",
+      "quota_summary": "$0.10/month for Free users; additional usage requires purchased credits or another billing arrangement.",
+      "privacy_summary": "Routed requests are billed and processed through the chosen provider; provider terms apply.",
+      "region_notes": "Provider/model availability varies.",
+      "notable_models": [
+        {
+          "id": "meta-llama/Llama-3.1-8B-Instruct",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "google/gemma-3-4b-it",
+          "modalities": [
+            "text",
+            "image"
+          ]
+        },
+        {
+          "id": "microsoft/phi-4",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "Qwen/Qwen2.5-Coder-7B-Instruct",
+          "modalities": [
+            "text",
+            "code"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "official_docs",
+      "sources": [
+        "https://huggingface.co/docs/inference-providers/pricing"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "z-ai",
+      "name": "Z AI (Zhipu AI)",
+      "category": "first_party",
+      "country": "CN",
+      "country_flag": "🇨🇳",
+      "signup_url": "https://open.bigmodel.cn/usercenter/apikeys",
+      "docs_url": "https://docs.z.ai/guides/develop/http/introduction",
+      "pricing_url": "https://docs.z.ai/guides/overview/pricing",
+      "base_url": "https://api.z.ai/api/paas/v4",
+      "auth": "api_key",
+      "account_required": true,
+      "card_required": null,
+      "identity_verification": "not_required_for_chat_api_per_provider_faq",
+      "openai_compatible": true,
+      "free_tier_type": "free_models",
+      "free_summary": "Z AI publishes selected models at Free pricing, including GLM-4.7-Flash and other free variants.",
+      "quota_summary": "Limits are model/account specific; published free models may be concurrency limited.",
+      "privacy_summary": "Review Z AI data and regional terms before sensitive use.",
+      "region_notes": "International and China endpoints use distinct account/platform flows.",
+      "notable_models": [
+        {
+          "id": "glm-4.7-flash",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "glm-4.5-flash",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "glm-4.6v-flash",
+          "modalities": [
+            "text",
+            "image"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "official_docs_and_provider_catalog",
+      "sources": [
+        "https://docs.z.ai/guides/develop/http/introduction",
+        "https://docs.z.ai/guides/overview/pricing",
+        "https://docs.bigmodel.cn/en/faq/authentication-issues.md"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "modelscope",
+      "name": "ModelScope API-Inference",
+      "category": "inference_provider",
+      "country": "CN",
+      "country_flag": "🇨🇳",
+      "signup_url": "https://modelscope.cn/my/myaccesstoken",
+      "docs_url": "https://modelscope.cn/docs/model-service/API-Inference/intro",
+      "pricing_url": "https://modelscope.cn/docs/model-service/API-Inference/limits",
+      "base_url": "https://api-inference.modelscope.cn/v1",
+      "auth": "api_token",
+      "account_required": true,
+      "card_required": null,
+      "identity_verification": "account_binding_and_real_name_verification",
+      "openai_compatible": true,
+      "free_tier_type": "recurring_free_tier",
+      "free_summary": "ModelScope provides free API-Inference for registered users under published usage/concurrency limits.",
+      "quota_summary": "Published limits include 2,000 requests/day total per user, with per-model quotas dynamically adjusted and capped at 500.",
+      "privacy_summary": "Review Alibaba Cloud/ModelScope terms and regional requirements.",
+      "region_notes": "Account binding and identity-verification rules can affect eligibility.",
+      "notable_models": [
+        {
+          "id": "Qwen/Qwen3.5-35B-A3B",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "Qwen/Qwen3.5-27B",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "Qwen/Qwen3.6-35B-A3B",
+          "modalities": [
+            "text"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "provider_docs",
+      "sources": [
+        "https://modelscope.cn/docs/model-service/API-Inference/limits",
+        "https://modelscope.cn/docs/model-service/API-Inference/intro"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "siliconflow",
+      "name": "SiliconFlow",
+      "category": "inference_provider",
+      "country": "CN",
+      "country_flag": "🇨🇳",
+      "signup_url": "https://cloud.siliconflow.cn/account/ak",
+      "docs_url": "https://api-docs.siliconflow.cn/",
+      "pricing_url": "https://cloud.siliconflow.cn/",
+      "base_url": "https://api.siliconflow.cn/v1",
+      "auth": "api_key",
+      "account_required": true,
+      "card_required": null,
+      "identity_verification": "required_for_free_models",
+      "openai_compatible": true,
+      "free_tier_type": "free_models",
+      "free_summary": "SiliconFlow has model-specific free models whose calls are priced at zero after the account requirements are satisfied.",
+      "quota_summary": "Free-model rate limits are fixed per model; exact limits are exposed by the model catalog.",
+      "privacy_summary": "Review current China/International service terms and model pricing.",
+      "region_notes": "China and international sites are separate account systems.",
+      "notable_models": [
+        {
+          "id": "Qwen/Qwen3-8B",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "Hunyuan-MT-7B",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "Qwen3.5-4B",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "THUDM/GLM-4-9B-0414",
+          "modalities": [
+            "text"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "provider_docs",
+      "sources": [
+        "https://api-docs.siliconflow.cn/docs/userguide/faqs/rate-limit-and-upgradation",
+        "https://api-docs.siliconflow.cn/docs/usercases/use-siliconcloud-in-lightrans",
+        "https://api-docs.siliconflow.cn/docs/usercases/use-siliconcloud-in-codex"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "ollama-cloud",
+      "name": "Ollama Cloud",
+      "category": "inference_provider",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "signup_url": "https://ollama.com/settings/keys",
+      "docs_url": "https://docs.ollama.com/cloud",
+      "pricing_url": "https://ollama.com/pricing",
+      "base_url": "https://ollama.com/api",
+      "auth": "api_key",
+      "account_required": true,
+      "card_required": null,
+      "identity_verification": "unknown",
+      "openai_compatible": true,
+      "free_tier_type": "recurring_free_tier",
+      "free_summary": "Ollama Cloud provides a free tier with session and weekly usage limits for supported cloud model families.",
+      "quota_summary": "Session limits reset every five hours and weekly limits reset every seven days; exact model weighting varies.",
+      "privacy_summary": "Review Ollama cloud terms before sending sensitive data.",
+      "region_notes": "Cloud model availability may vary.",
+      "notable_models": [
+        {
+          "id": "deepseek-v4-pro",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "deepseek-v4-flash",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "minimax-m3",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "gpt-oss:120b",
+          "modalities": [
+            "text"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "provider_docs",
+      "sources": [
+        "https://docs.ollama.com/cloud",
+        "https://ollama.com/pricing"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "kilo-code",
+      "name": "Kilo Code Gateway",
+      "category": "inference_provider",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "signup_url": "https://app.kilo.ai/profile",
+      "docs_url": "https://kilo.ai/docs/gateway/authentication",
+      "pricing_url": "https://kilo.ai/docs/gateway/models-and-providers",
+      "base_url": "https://api.kilo.ai/api/gateway",
+      "auth": "optional_api_key",
+      "account_required": false,
+      "card_required": null,
+      "identity_verification": "unknown",
+      "openai_compatible": true,
+      "free_tier_type": "free_pool",
+      "free_summary": "Kilo Code exposes a free model pool, including an auto-router, with no API key required for the free gateway path.",
+      "quota_summary": "Published free-gateway access is rate limited; the provider documents 200 requests/hour per IP for the free pool.",
+      "privacy_summary": "Some routed providers may log prompts/outputs; inspect the provider notice before using sensitive data.",
+      "region_notes": "Free-pool membership changes frequently.",
+      "notable_models": [
+        {
+          "id": "kilo-auto/free",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "stepfun/step-3.7-flash:free",
+          "modalities": [
+            "text",
+            "image"
+          ]
+        },
+        {
+          "id": "poolside/laguna-s-2.1:free",
+          "modalities": [
+            "text",
+            "code"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "provider_docs_and_live_reference",
+      "sources": [
+        "https://kilo.ai/docs/gateway/authentication",
+        "https://kilo.ai/docs/gateway/models-and-providers"
+      ],
+      "status": "active_dynamic_catalog"
+    },
+    {
+      "id": "llm7",
+      "name": "LLM7.io",
+      "category": "inference_provider",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "signup_url": "https://token.llm7.io",
+      "docs_url": "https://docs.llm7.io/",
+      "pricing_url": "https://docs.llm7.io/limits",
+      "base_url": "https://api.llm7.io/v1",
+      "auth": "optional_free_token",
+      "account_required": false,
+      "card_required": false,
+      "identity_verification": "unknown",
+      "openai_compatible": true,
+      "free_tier_type": "keyless_or_free_token",
+      "free_summary": "LLM7 offers anonymous access to a free model pool; a free token raises the limits while keeping the same free models.",
+      "quota_summary": "Anonymous: 10 RPM, 60 requests/hour and 500k tokens/day; free-token limits are higher according to the provider's limits page.",
+      "privacy_summary": "Review LLM7's terms before sending sensitive prompts.",
+      "region_notes": "Catalog rotates frequently.",
+      "notable_models": [
+        {
+          "id": "gpt-oss:20b",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "mistral-Nemo-Instruct-2407",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "minimax-m2.7",
+          "modalities": [
+            "text"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "provider_docs_and_live_reference",
+      "sources": [
+        "https://docs.llm7.io/limits",
+        "https://docs.llm7.io/guides/models-api"
+      ],
+      "status": "active_dynamic_catalog"
+    },
+    {
+      "id": "ovhcloud-ai-endpoints",
+      "name": "OVHcloud AI Endpoints",
+      "category": "inference_provider",
+      "country": "FR",
+      "country_flag": "🇫🇷",
+      "signup_url": "https://www.ovhcloud.com/en/public-cloud/ai-endpoints/catalog/",
+      "docs_url": "https://www.ovhcloud.com/en/public-cloud/ai-endpoints/catalog/",
+      "pricing_url": "https://www.ovhcloud.com/en/public-cloud/ai-endpoints/catalog/",
+      "base_url": "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1",
+      "auth": "optional_api_key",
+      "account_required": false,
+      "card_required": false,
+      "identity_verification": "not_required_for_anonymous_free_tier",
+      "openai_compatible": true,
+      "free_tier_type": "anonymous_free_tier",
+      "free_summary": "OVHcloud AI Endpoints currently offers a free anonymous tier without signup or API key at a low per-IP/per-model rate.",
+      "quota_summary": "2 requests/minute per IP per model on the anonymous free path; higher limits are paid.",
+      "privacy_summary": "Models are hosted in EU data centers; review OVHcloud terms for your workload.",
+      "region_notes": "Models are hosted in EU data centers.",
+      "notable_models": [
+        {
+          "id": "Qwen3.5-397B-A17B",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "gpt-oss-120b",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "Meta-Llama-3_3-70B-Instruct",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "Qwen2.5-VL-72B-Instruct",
+          "modalities": [
+            "text",
+            "image"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "reference_repo_and_provider_catalog",
+      "sources": [
+        "https://www.ovhcloud.com/en/public-cloud/ai-endpoints/catalog/"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "aion-labs",
+      "name": "Aion Labs",
+      "category": "first_party",
+      "country": "IL",
+      "country_flag": "🇮🇱",
+      "signup_url": "https://www.aionlabs.ai/app/api-keys/",
+      "docs_url": "https://www.aionlabs.ai/",
+      "pricing_url": "https://www.aionlabs.ai/",
+      "base_url": "https://api.aionlabs.ai/v1",
+      "auth": "api_key",
+      "account_required": true,
+      "card_required": null,
+      "identity_verification": "unknown",
+      "openai_compatible": true,
+      "free_tier_type": "permanent_free_tier",
+      "free_summary": "Aion Labs advertises a permanent free tier for its text inference APIs.",
+      "quota_summary": "Published limits include 15 RPM and 20K tokens/day on the referenced free endpoints.",
+      "privacy_summary": "Review current provider terms before sensitive use.",
+      "region_notes": "Availability may vary.",
+      "notable_models": [
+        {
+          "id": "aion-labs/aion-2.0",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "aion-labs/aion-3.0",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "aion-labs/aion-3.0-mini",
+          "modalities": [
+            "text"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "provider_page_reference",
+      "sources": [
+        "https://www.aionlabs.ai/app/api-keys/"
+      ],
+      "status": "active_needs_periodic_recheck"
+    },
+    {
+      "id": "omniroute",
+      "name": "OmniRoute",
+      "category": "gateway",
+      "country": "BR",
+      "country_flag": "🇧🇷",
+      "signup_url": "https://github.com/diegosouzapw/OmniRoute",
+      "docs_url": "https://github.com/diegosouzapw/OmniRoute/wiki/Quick-Start",
+      "pricing_url": "https://github.com/diegosouzapw/OmniRoute/wiki/Free-Tiers-Guide",
+      "base_url": "http://localhost:20128/v1",
+      "auth": "local_api_key",
+      "account_required": false,
+      "card_required": false,
+      "identity_verification": "not_required_to_run_gateway",
+      "openai_compatible": true,
+      "free_tier_type": "self_hosted_free_gateway",
+      "free_summary": "OmniRoute is a free MIT-licensed self-hosted AI gateway. It does not provide a single hosted free quota; instead, it lets you connect free providers and route requests through one local OpenAI-compatible endpoint.",
+      "quota_summary": "No separate OmniRoute quota. Available capacity follows the free or paid quotas of the providers you connect; documented routing supports automatic fallback across them.",
+      "privacy_summary": "The gateway runs locally by default. Prompts are sent to whichever upstream providers you configure, so upstream provider terms still apply.",
+      "region_notes": "Local deployment avoids a mandatory OmniRoute-hosted account; upstream provider availability and regional restrictions still apply.",
+      "notable_models": [
+        {
+          "id": "auto",
+          "kind": "routing_profile",
+          "modalities": [
+            "text",
+            "multimodal"
+          ],
+          "description": "Balanced automatic routing profile."
+        },
+        {
+          "id": "auto/coding",
+          "kind": "routing_profile",
+          "modalities": [
+            "text",
+            "code"
+          ],
+          "description": "Quality-first routing profile for coding."
+        },
+        {
+          "id": "auto/fast",
+          "kind": "routing_profile",
+          "modalities": [
+            "text",
+            "multimodal"
+          ],
+          "description": "Latency-first routing profile."
+        },
+        {
+          "id": "auto/cheap",
+          "kind": "routing_profile",
+          "modalities": [
+            "text",
+            "multimodal"
+          ],
+          "description": "Cost-first routing profile."
+        },
+        {
+          "id": "auto/offline",
+          "kind": "routing_profile",
+          "modalities": [
+            "text",
+            "multimodal"
+          ],
+          "description": "Availability/quota-focused routing profile."
+        },
+        {
+          "id": "auto/smart",
+          "kind": "routing_profile",
+          "modalities": [
+            "text",
+            "multimodal"
+          ],
+          "description": "Quality-focused routing with exploration."
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "official_repo_and_docs",
+      "sources": [
+        "https://github.com/diegosouzapw/OmniRoute",
+        "https://github.com/diegosouzapw/OmniRoute/wiki/Quick-Start",
+        "https://github.com/diegosouzapw/OmniRoute/wiki/Providers-Guide",
+        "https://github.com/diegosouzapw/OmniRoute/wiki/Free-Tiers-Guide",
+        "https://github.com/diegosouzapw/OmniRoute/wiki/in%E2%80%90Auto-Combo"
+      ],
+      "status": "active_self_hosted_gateway",
+      "default_route": "auto",
+      "route_guidance": {
+        "auto": "Balanced default: automatic selection among connected providers.",
+        "auto/coding": "Use for coding and software-engineering tasks.",
+        "auto/fast": "Use when latency is the primary objective.",
+        "auto/cheap": "Use when minimizing cost is the primary objective.",
+        "auto/offline": "Use when maximizing quota/availability headroom is the priority.",
+        "auto/smart": "Use when prioritizing quality while allowing exploration."
+      }
+    },
+    {
+      "id": "kiro-ai-omniroute",
+      "name": "Kiro AI (OmniRoute upstream)",
+      "category": "inference_provider",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "signup_url": "https://kiro.dev/",
+      "docs_url": "https://github.com/diegosouzapw/OmniRoute/wiki/Providers-Guide",
+      "pricing_url": "https://kiro.dev/pricing/",
+      "base_url": "https://kiro.dev/",
+      "auth": "omniroute_integration",
+      "account_required": false,
+      "card_required": false,
+      "identity_verification": "not_required_for_omniroute_connection; Kiro itself has account tiers",
+      "openai_compatible": false,
+      "free_tier_type": "recurring_free_tier",
+      "free_summary": "OmniRoute documents Kiro AI as a free upstream connection with no API key required in the OmniRoute provider flow. Kiro itself has a perpetual Free tier with 50 credits/month; the upstream service terms govern access to the models.",
+      "quota_summary": "Kiro Free currently lists 50 credits per monthly billing cycle; exact model/rate consumption depends on the request. OmniRoute may abstract provider authentication.",
+      "privacy_summary": "Requests ultimately reach Kiro and are subject to Kiro terms; the local OmniRoute gateway does not remove upstream provider policies.",
+      "region_notes": "Kiro model availability can vary by country/region.",
+      "notable_models": [
+        {
+          "id": "Claude Sonnet 4.5",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "Qwen3 Coder Next",
+          "modalities": [
+            "text",
+            "code"
+          ]
+        },
+        {
+          "id": "DeepSeek 3.2",
+          "modalities": [
+            "text",
+            "code"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "official_kiro_docs_and_omniroute_provider_guide",
+      "sources": [
+        "https://kiro.dev/docs/billing/",
+        "https://kiro.dev/pricing/",
+        "https://github.com/diegosouzapw/OmniRoute/wiki/Providers-Guide"
+      ],
+      "status": "active_omniroute_integration",
+      "access_via": [
+        "OmniRoute"
+      ],
+      "direct_api_status": "not_catalogued_as_standalone_public_api_here",
+      "endpoint_type": "integration_reference"
+    },
+    {
+      "id": "opencode-free-omniroute",
+      "name": "OpenCode Free (OmniRoute upstream)",
+      "category": "inference_provider",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "signup_url": "https://opencode.ai/",
+      "docs_url": "https://opencode.ai/docs/zen",
+      "pricing_url": "https://opencode.ai/docs/zen",
+      "base_url": "https://opencode.ai/zen/v1",
+      "auth": "omniroute_integration",
+      "account_required": false,
+      "card_required": null,
+      "identity_verification": "not_required_for_omniroute_connection; direct OpenCode Zen access may require login/billing details",
+      "openai_compatible": true,
+      "free_tier_type": "free_models",
+      "free_summary": "OmniRoute documents an OpenCode Free upstream with no API key required in its provider flow. OpenCode’s own Zen documentation currently describes several free models as available for a limited time, so this entry is not classified as a permanent free tier.",
+      "quota_summary": "Free-model availability and limits are model-specific and can change; current OpenCode documentation lists free models such as MiMo-V2.5 Free, Ling 3.0 Flash Fin Free, Nemotron 3 Ultra Free, Nemotron 3.5 Lightning Free, and Big Pickle.",
+      "privacy_summary": "Requests are handled by OpenCode and its upstream model providers according to their current terms.",
+      "region_notes": "Availability may vary by account and model.",
+      "notable_models": [
+        {
+          "id": "mimo-v2.5-free",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "ling-3.0-flash-fin-free",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "nemotron-3-ultra-free",
+          "modalities": [
+            "text",
+            "code"
+          ]
+        },
+        {
+          "id": "nemotron-3.5-lightning-free",
+          "modalities": [
+            "text",
+            "code"
+          ]
+        },
+        {
+          "id": "big-pickle",
+          "modalities": [
+            "text",
+            "code"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "official_opencode_docs_and_omniroute_provider_guide",
+      "sources": [
+        "https://opencode.ai/docs/zen",
+        "https://github.com/diegosouzapw/OmniRoute/wiki/Providers-Guide",
+        "https://github.com/diegosouzapw/OmniRoute/wiki/Free-Tiers-Guide"
+      ],
+      "status": "active_limited_time_free_models",
+      "access_via": [
+        "OmniRoute"
+      ],
+      "direct_api_status": "authenticated_direct_access_documented_separately",
+      "endpoint_type": "upstream_api"
+    },
+    {
+      "id": "pollinations-omniroute",
+      "name": "Pollinations (OmniRoute upstream)",
+      "category": "inference_provider",
+      "country": "DE",
+      "country_flag": "🇩🇪",
+      "signup_url": "https://pollinations.ai/",
+      "docs_url": "https://github.com/pollinations/pollinations/blob/main/APIDOCS.md",
+      "pricing_url": "https://github.com/pollinations/pollinations/blob/main/APIDOCS.md",
+      "base_url": "https://gen.pollinations.ai/v1",
+      "auth": "omniroute_integration",
+      "account_required": false,
+      "card_required": null,
+      "identity_verification": "not_required_for_omniroute_connection; direct Pollinations API offers registered and key-based access paths",
+      "openai_compatible": true,
+      "free_tier_type": "keyless_or_free_token",
+      "free_summary": "OmniRoute documents Pollinations as a no-key free upstream. Pollinations also maintains an OpenAI-compatible API and multiple access levels; direct API limits and authentication options should be checked against its current API documentation.",
+      "quota_summary": "No single stable quota is asserted here because Pollinations exposes different free/registered/key-based access paths and model-specific rules; use the provider’s current model metadata and terms.",
+      "privacy_summary": "Pollinations publishes privacy-focused policies, but requests can route to different upstream model providers; review current data-use terms for sensitive workloads.",
+      "region_notes": "Provider/model availability can vary.",
+      "notable_models": [
+        {
+          "id": "openai/gpt-5.4-nano",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "openai/gpt-oss-20b",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "anthropic/claude-sonnet-4.6",
+          "modalities": [
+            "text"
+          ]
+        },
+        {
+          "id": "google/gemini-3.7-flash",
+          "modalities": [
+            "text",
+            "image"
+          ]
+        },
+        {
+          "id": "deepseek/deepseek-v4-flash",
+          "modalities": [
+            "text"
+          ]
+        }
+      ],
+      "last_verified": "2026-09-20",
+      "verification": "official_pollinations_docs_and_omniroute_provider_guide",
+      "sources": [
+        "https://github.com/pollinations/pollinations/blob/main/APIDOCS.md",
+        "https://github.com/pollinations/pollinations",
+        "https://github.com/diegosouzapw/OmniRoute/wiki/Providers-Guide"
+      ],
+      "status": "active_omniroute_integration",
+      "access_via": [
+        "OmniRoute"
+      ],
+      "direct_api_status": "openai_compatible_api_documented",
+      "endpoint_type": "upstream_api"
+    }
+  ],
+  "glossary": {
+    "RPM": "Requests per minute",
+    "RPD": "Requests per day",
+    "TPM": "Tokens per minute",
+    "TPD": "Tokens per day",
+    "RPS": "Requests per second",
+    "M": "Million tokens when used in quota/size notation",
+    "free_tier_type": "How the provider's zero-cost access is structured"
+  }
+}

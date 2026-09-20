@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI API Atlas</title>
+<style>
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#111827;background:#f8fafc;line-height:1.5}
+body{margin:0}.wrap{max-width:1200px;margin:auto;padding:40px 20px 70px}.hero{padding:30px 0 20px}.hero h1{font-size:48px;line-height:1.05;margin:0 0 12px}.hero p{font-size:18px;color:#475569;max-width:850px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:24px 0}.stat{background:white;border:1px solid #e2e8f0;border-radius:14px;padding:16px}.stat b{display:block;font-size:27px}.toolbar{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:10px;margin:20px 0}.toolbar input,.toolbar select{border:1px solid #cbd5e1;border-radius:10px;padding:12px;background:white}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:14px}.card{background:white;border:1px solid #e2e8f0;border-radius:16px;padding:18px}.card h3{margin:0 0 5px}.muted{color:#64748b;font-size:14px}.pill{display:inline-block;border:1px solid #cbd5e1;border-radius:999px;padding:4px 8px;font-size:12px;margin:3px 3px 0 0}.yes{font-weight:700}.card a{color:#2563eb;text-decoration:none}.row{margin-top:10px}.empty{padding:30px;color:#64748b;text-align:center}.footer{margin-top:30px;color:#64748b;font-size:13px}@media(max-width:800px){.stats{grid-template-columns:repeat(2,1fr)}.toolbar{grid-template-columns:1fr 1fr}.hero h1{font-size:38px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <div class="muted">OPEN DATA DIRECTORY</div>
+    <h1>🌐 AI API Atlas</h1>
+    <p>Find AI APIs with free access, including services that require you to create an account and API key. Filter by login, card requirement, compatibility, and free-access model.</p>
+  </section>
+  <div id="stats" class="stats"></div>
+  <section class="toolbar">
+    <input id="q" placeholder="Search provider or model…">
+    <select id="account"><option value="">Account: any</option><option value="yes">Login required</option><option value="no">No login</option></select>
+    <select id="card"><option value="">Card: any</option><option value="yes">Card required</option><option value="no">No card</option></select>
+    <select id="compat"><option value="">Compatibility: any</option><option value="yes">OpenAI-compatible</option><option value="no">Other API</option></select>
+  </section>
+  <div id="grid" class="grid"></div>
+  <div class="footer">Data source: <code>data/providers.json</code>. Free-tier details can change; verify against each provider before production use.</div>
+</div>
+<script>
+const state={providers:[],q:'',account:'',card:'',compat:''};
+const typeLabel={permanent_free_tier:'Permanent',recurring_free_tier:'Recurring',free_models:'Free models',free_trial_key:'Trial key',monthly_credit:'Monthly credit',daily_free_allocation:'Daily allocation',free_pool:'Free pool',keyless_or_free_token:'Free token/keyless',anonymous_free_tier:'Anonymous',self_hosted_free_gateway:'Self-hosted gateway'};
+function matches(p){const q=state.q.trim().toLowerCase();const hay=[p.name,p.free_summary,p.quota_summary,...p.notable_models.map(m=>m.id),...(p.notable_models||[]).map(m=>m.description||'')].join(' ').toLowerCase();if(q&&!hay.includes(q))return false;if(state.account&&String(p.account_required)!==(state.account==='yes'))return false;if(state.card&&String(p.card_required)!==(state.card==='yes'))return false;if(state.compat&&String(p.openai_compatible)!==(state.compat==='yes'))return false;return true}
+function render(){const ps=state.providers.filter(matches);document.getElementById('stats').innerHTML=`<div class="stat"><span class="muted">Providers</span><b>${state.providers.length}</b></div><div class="stat"><span class="muted">Login required</span><b>${state.providers.filter(p=>p.account_required).length}</b></div><div class="stat"><span class="muted">No card listed</span><b>${state.providers.filter(p=>!p.card_required).length}</b></div><div class="stat"><span class="muted">OpenAI compatible</span><b>${state.providers.filter(p=>p.openai_compatible).length}</b></div>`;document.getElementById('grid').innerHTML=ps.length?ps.map(p=>`<article class="card"><h3>${p.country_flag} <a href="${p.signup_url}" target="_blank" rel="noreferrer">${p.name}</a></h3><div class="muted">${p.category.replace('_',' ')} · ${p.access_via&&p.access_via.includes('OmniRoute')?'OmniRoute integration · ':''}verified ${p.last_verified}</div><div class="row"><span class="pill">${typeLabel[p.free_tier_type]||p.free_tier_type}</span><span class="pill">${p.account_required?'Login required':'No login'}</span><span class="pill">${p.card_required===true?'Card required':p.card_required===false?'No card':'Card unknown'}</span><span class="pill">${p.openai_compatible?'OpenAI compatible':'Provider API'}</span></div><p>${p.free_summary}</p><div class="row"><b>Quota:</b> ${p.quota_summary}</div>${p.direct_api_status?`<div class="row"><b>Direct API:</b> ${p.direct_api_status}</div>`:''}<div class="row"><b>${p.category==='gateway'?'Routes':'Models'}:</b><br>${p.notable_models.map(m=>`<span class="pill">${m.id}</span>`).join('')}</div><div class="row"><a href="${p.docs_url}" target="_blank" rel="noreferrer">Docs ↗</a> · <a href="${p.signup_url}" target="_blank" rel="noreferrer">Access ↗</a></div></article>`).join(''):'<div class="empty">No providers match the current filters.</div>'}
+fetch('../data/providers.json').then(r=>r.json()).then(d=>{state.providers=d.providers;render();});
+for(const id of ['q','account','card','compat']){document.getElementById(id).addEventListener(id==='q'?'input':'change',e=>{state[id]=e.target.value;render()})}
+</script>
+</body>
+</html>
