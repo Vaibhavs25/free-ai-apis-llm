@@ -8,7 +8,7 @@
 
 This directory deliberately includes **free APIs that require an account/login**. Login-required access is not treated as a worse class of API: it is tracked separately so you can filter by the setup you are willing to accept.
 
-**36 entries · 1 gateway · 15 OmniRoute upstreams · 27 account-required · 12 with no card documented · 24 card requirements unknown · 32 OpenAI-compatible · 23 recurring/model-free entries**
+**35 entries · 1 gateway · 15 OmniRoute upstreams · 27 account-required · 12 with no card documented · 23 card requirements unknown · 31 OpenAI-compatible · 22 recurring/model-free entries**
 
 | Provider | Free access | Account | Card | OpenAI-compatible | Quota |
 |---|---|---:|---:|---:|---|
@@ -24,7 +24,7 @@ This directory deliberately includes **free APIs that require an account/login**
 | [ModelScope API-Inference](https://modelscope.cn/my/myaccesstoken) | 🔄 login | ✅ | ? | ✅ | Published limits include 2,000 requests/day total per user, with per-model quotas dynamically adjusted and capped at 500. |
 | [SiliconFlow](https://cloud.siliconflow.cn/account/ak) | 🆓 login | ✅ | ? | ✅ | Free-model rate limits are fixed per model; exact limits are exposed by the model catalog. |
 | [Ollama Cloud](https://ollama.com/settings/keys) | 🔄 login | ✅ | ? | ✅ | Session limits reset every five hours and weekly limits reset every seven days; exact model weighting varies. |
-| [Kilo Code Gateway](https://app.kilo.ai/profile) | 🆓 anonymous | — | ? | ✅ | Published free-gateway access is rate limited; the provider documents 200 requests/hour per IP for the free pool. |
+| [Kilo Code](https://app.kilo.ai/profile) | 🆓 anonymous | — | ? | ✅ | Published free-gateway access is rate limited; the provider documents 200 requests/hour per IP for the free pool. |
 | [LLM7.io](https://token.llm7.io) | 🔑 anonymous | — | — | ✅ | Anonymous: 10 RPM, 60 requests/hour and 500k tokens/day; free-token limits are higher according to the provider's limits page. |
 | [OVHcloud AI Endpoints](https://www.ovhcloud.com/en/public-cloud/ai-endpoints/catalog/) | 👤 anonymous | — | — | ✅ | 2 requests/minute per IP per model on the anonymous free path; higher limits are paid. |
 | [Aion Labs](https://www.aionlabs.ai/app/api-keys/) | ♾️ login | ✅ | ? | ✅ | Published limits include 15 RPM and 20K tokens/day on the referenced free endpoints. |
@@ -46,7 +46,6 @@ This directory deliberately includes **free APIs that require an account/login**
 | [LongCat API](https://longcat.ai/platform/) | 🧪 OmniRoute | ✅ | ? | ✅ | Current OmniRoute evidence records a one-time 10M-token free allocation; verify the live LongCat account quota before use. |
 | [Morph](https://www.morphllm.com/) | 💵 login | ✅ | ? | ✅ | 200 requests/month free; hosted model usage after the free allowance is usage-priced. |
 | [Public AI Gateway](https://platform.publicai.co/) | 🔄 login | ✅ | ? | ✅ | The current Free tier is documented at 100 requests/minute; paid/Plus plans increase that limit. |
-| [Kilo Code](https://app.kilo.ai/profile) | 🆓 anonymous | — | ? | ✅ | The reference snapshot lists 200 requests/hour per IP for the free pool; the free model roster changes frequently. |
 | [NVIDIA NIM](https://build.nvidia.com/explore/discover) | 🔄 login | ✅ | ? | ✅ | The reference snapshot lists 40 RPM and 10,000 requests/day for its included models; check the current NVIDIA model page for live limits. |
 
 ## 🧑‍💻 Free APIs that require login
@@ -355,20 +354,6 @@ OmniRoute's current catalog records a signup credit for Hyperbolic API experimen
 **Last verified:** 2026-09-20 · [omniroute_catalog_plus_official_docs sources](https://docs.hyperbolic.ai/)
 
 ### 🆓 [Kilo Code](https://app.kilo.ai/profile) 🇺🇸
-
-**Access:** No login · **Card:** Unknown · **OpenAI-compatible:** ✅
-
-Kilo Code exposes a free model pool and an automatic free router; the free gateway path does not require an API key.
-
-**Quota:** The reference snapshot lists 200 requests/hour per IP for the free pool; the free model roster changes frequently.
-
-**Base URL:** `https://api.kilo.ai/api/gateway`
-
-**Models:** `kilo-auto/free` (text — 200 req/hr (reference snapshot)); `nvidia/nemotron-3-super-120b-a12b:free` (text — 200 req/hr (reference snapshot)); `stepfun/step-3.7-flash:free` (text, image — 200 req/hr (reference snapshot)); `poolside/laguna-s-2.1:free` (text, code — 200 req/hr (reference snapshot))
-
-**Last verified:** 2026-09-20 · [official_kilo_docs_plus_reference_crosscheck sources](https://kilo.ai/docs/gateway/authentication)
-
-### 🆓 [Kilo Code Gateway](https://app.kilo.ai/profile) 🇺🇸
 
 **Access:** No login · **Card:** Unknown · **OpenAI-compatible:** ✅
 
