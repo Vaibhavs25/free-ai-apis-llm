@@ -9,6 +9,7 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "providers.json"
+OMNI = ROOT / "data" / "omniroute-free-catalog.json"
 
 REQUIRED = [
     "id", "name", "category", "signup_url", "docs_url", "base_url", "auth",
@@ -91,6 +92,33 @@ def main() -> int:
     if errors:
         print("\n".join(f"ERROR: {e}" for e in errors))
         return 1
+
+
+    if OMNI.exists():
+        try:
+            omni = json.loads(OMNI.read_text(encoding="utf-8"))
+        except Exception as exc:
+            errors.append(f"unable to parse OmniRoute catalog: {exc}")
+            omni = {}
+        entries = omni.get("entries")
+        if not isinstance(entries, list) or not entries:
+            errors.append("OmniRoute catalog entries must be a non-empty list")
+        seen_omni: set[str] = set()
+        for idx, entry in enumerate(entries or [], start=1):
+            if not isinstance(entry, dict):
+                errors.append(f"OmniRoute entry #{idx} must be an object")
+                continue
+            oid = entry.get("omniroute_id")
+            if not isinstance(oid, str) or not oid:
+                errors.append(f"OmniRoute entry #{idx} needs omniroute_id")
+            elif oid in seen_omni:
+                errors.append(f"OmniRoute entry #{idx}: duplicate id '{oid}'")
+            else:
+                seen_omni.add(oid)
+            if entry.get("free_type") not in {"recurring","uncapped","signup_credit","keyless","one_time"}:
+                errors.append(f"OmniRoute entry #{idx}: invalid free_type")
+            if entry.get("tos") not in {"ok","caution","ambiguous","avoid","unknown"}:
+                errors.append(f"OmniRoute entry #{idx}: invalid tos")
 
     # Guard against accidentally adding a duplicate source or empty display metadata.
     for provider in providers:
