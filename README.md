@@ -88,6 +88,7 @@ Example fields include `account_required`, `card_required`, `free_tier_type`, `f
 - [Gateways and routers](#gateways-and-routers)
 - [OmniRoute upstreams](#omniroute-upstreams)
 - [Google Antigravity free models](#google-antigravity-free-models)
+- [OmniRoute model-level free catalog](#omniroute-model-level-free-catalog)
 - [Verification model](#verification-model)
 - [Contributing](CONTRIBUTING.md)
 - [Security](SECURITY.md)
