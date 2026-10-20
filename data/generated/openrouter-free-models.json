@@ -1,7 +1,7 @@
 {
   "source": "https://openrouter.ai/api/v1/models",
-  "generated_at": "2026-10-19T09:53:33Z",
-  "count": 19,
+  "generated_at": "2026-10-20T09:25:01Z",
+  "count": 20,
   "models": [
     {
       "id": "cohere/north-mini-code:free",
@@ -27,7 +27,7 @@
         "max_completion_tokens": 64000,
         "is_moderated": true
       },
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
     },
     {
       "id": "dots-studio/dots-3-note-preview:free",
@@ -54,7 +54,7 @@
         "max_completion_tokens": 460800,
         "is_moderated": false
       },
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
     },
     {
       "id": "openrouter/free",
@@ -81,7 +81,7 @@
         "max_completion_tokens": null,
         "is_moderated": false
       },
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
     },
     {
       "id": "google/gemma-4-26b-a4b-it:free",
@@ -109,7 +109,7 @@
         "max_completion_tokens": 32768,
         "is_moderated": false
       },
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
     },
     {
       "id": "google/gemma-4-31b-it:free",
@@ -137,7 +137,7 @@
         "max_completion_tokens": 32768,
         "is_moderated": false
       },
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
     },
     {
       "id": "google/lyria-3-clip-preview",
@@ -165,7 +165,7 @@
         "max_completion_tokens": 65536,
         "is_moderated": false
       },
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
     },
     {
       "id": "google/lyria-3-pro-preview",
@@ -193,7 +193,7 @@
         "max_completion_tokens": 65536,
         "is_moderated": false
       },
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
     },
     {
       "id": "liquid/lfm-2.5-2.6b:free",
@@ -219,7 +219,35 @@
         "max_completion_tokens": 8192,
         "is_moderated": false
       },
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
+    },
+    {
+      "id": "minimax/minimax-m3.1-flash:free",
+      "name": "MiniMax: MiniMax M3.1 Flash (free)",
+      "context_length": 1000000,
+      "architecture": {
+        "modality": "text+image+video->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0",
+        "completion": "0"
+      },
+      "top_provider": {
+        "context_length": 1000000,
+        "max_completion_tokens": 524288,
+        "is_moderated": false
+      },
+      "last_seen": "2026-10-20"
     },
     {
       "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
@@ -248,7 +276,7 @@
         "max_completion_tokens": 65536,
         "is_moderated": false
       },
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
     },
     {
       "id": "nvidia/nemotron-3-super-120b-a12b:free",
@@ -274,7 +302,7 @@
         "max_completion_tokens": 235929,
         "is_moderated": false
       },
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
     },
     {
       "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
@@ -300,7 +328,7 @@
         "max_completion_tokens": 65536,
         "is_moderated": false
       },
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
     },
     {
       "id": "nvidia/nemotron-3.5-content-safety:free",
@@ -327,7 +355,7 @@
         "max_completion_tokens": 8192,
         "is_moderated": false
       },
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
     },
     {
       "id": "nvidia/nemotron-3.5-lightning:free",
@@ -353,7 +381,7 @@
         "max_completion_tokens": 65536,
         "is_moderated": false
       },
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
     },
     {
       "id": "nvidia/nemotron-3.5-super-vl:free",
@@ -381,7 +409,7 @@
         "max_completion_tokens": 131072,
         "is_moderated": false
       },
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
     },
     {
       "id": "poolside/laguna-s-2.1:free",
@@ -407,7 +435,7 @@
         "max_completion_tokens": 32768,
         "is_moderated": false
       },
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
     },
     {
       "id": "poolside/laguna-xs-2.1:free",
@@ -433,7 +461,7 @@
         "max_completion_tokens": 32768,
         "is_moderated": false
       },
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
     },
     {
       "id": "thinkingmachines/inkling:free",
@@ -461,7 +489,7 @@
         "max_completion_tokens": 262144,
         "is_moderated": false
       },
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
     },
     {
       "id": "thinkingmachines/inkling-small:free",
@@ -489,7 +517,7 @@
         "max_completion_tokens": 262144,
         "is_moderated": false
       },
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
     },
     {
       "id": "xingchen-agi/xing4.0-29b-a4b:free",
@@ -515,7 +543,7 @@
         "max_completion_tokens": 235929,
         "is_moderated": false
       },
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
     }
   ]
 }
