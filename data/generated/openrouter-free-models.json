@@ -1,7 +1,7 @@
 {
   "source": "https://openrouter.ai/api/v1/models",
-  "generated_at": "2026-11-03T11:55:59Z",
-  "count": 17,
+  "generated_at": "2026-11-04T12:07:42Z",
+  "count": 18,
   "models": [
     {
       "id": "cohere/north-mini-code:free",
@@ -27,7 +27,37 @@
         "max_completion_tokens": 64000,
         "is_moderated": true
       },
-      "last_seen": "2026-11-03"
+      "last_seen": "2026-11-04"
+    },
+    {
+      "id": "stealth/crouton-alpha",
+      "name": "Crouton Alpha",
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text+image+file+audio+video->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "video",
+          "file",
+          "audio"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0",
+        "completion": "0"
+      },
+      "top_provider": {
+        "context_length": 1048576,
+        "max_completion_tokens": 943718,
+        "is_moderated": false
+      },
+      "last_seen": "2026-11-04"
     },
     {
       "id": "dots-studio/dots-3-note-preview:free",
@@ -54,7 +84,7 @@
         "max_completion_tokens": 460800,
         "is_moderated": false
       },
-      "last_seen": "2026-11-03"
+      "last_seen": "2026-11-04"
     },
     {
       "id": "openrouter/free",
@@ -81,7 +111,7 @@
         "max_completion_tokens": null,
         "is_moderated": false
       },
-      "last_seen": "2026-11-03"
+      "last_seen": "2026-11-04"
     },
     {
       "id": "google/gemma-4-26b-a4b-it:free",
@@ -109,7 +139,7 @@
         "max_completion_tokens": 32768,
         "is_moderated": false
       },
-      "last_seen": "2026-11-03"
+      "last_seen": "2026-11-04"
     },
     {
       "id": "google/gemma-4-31b-it:free",
@@ -137,7 +167,7 @@
         "max_completion_tokens": 32768,
         "is_moderated": false
       },
-      "last_seen": "2026-11-03"
+      "last_seen": "2026-11-04"
     },
     {
       "id": "google/lyria-3-clip-preview",
@@ -165,7 +195,7 @@
         "max_completion_tokens": 65536,
         "is_moderated": false
       },
-      "last_seen": "2026-11-03"
+      "last_seen": "2026-11-04"
     },
     {
       "id": "google/lyria-3-pro-preview",
@@ -193,7 +223,7 @@
         "max_completion_tokens": 65536,
         "is_moderated": false
       },
-      "last_seen": "2026-11-03"
+      "last_seen": "2026-11-04"
     },
     {
       "id": "liquid/lfm-2.5-2.6b:free",
@@ -219,7 +249,7 @@
         "max_completion_tokens": 8192,
         "is_moderated": false
       },
-      "last_seen": "2026-11-03"
+      "last_seen": "2026-11-04"
     },
     {
       "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
@@ -248,7 +278,7 @@
         "max_completion_tokens": 65536,
         "is_moderated": false
       },
-      "last_seen": "2026-11-03"
+      "last_seen": "2026-11-04"
     },
     {
       "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
@@ -274,7 +304,7 @@
         "max_completion_tokens": 65536,
         "is_moderated": false
       },
-      "last_seen": "2026-11-03"
+      "last_seen": "2026-11-04"
     },
     {
       "id": "nvidia/nemotron-3.5-content-safety:free",
@@ -301,7 +331,7 @@
         "max_completion_tokens": 8192,
         "is_moderated": false
       },
-      "last_seen": "2026-11-03"
+      "last_seen": "2026-11-04"
     },
     {
       "id": "nvidia/nemotron-3.5-lightning:free",
@@ -327,7 +357,7 @@
         "max_completion_tokens": 65536,
         "is_moderated": false
       },
-      "last_seen": "2026-11-03"
+      "last_seen": "2026-11-04"
     },
     {
       "id": "nvidia/nemotron-3.5-super-vl:free",
@@ -355,7 +385,7 @@
         "max_completion_tokens": 131072,
         "is_moderated": false
       },
-      "last_seen": "2026-11-03"
+      "last_seen": "2026-11-04"
     },
     {
       "id": "recursive/flint-v1.0:free",
@@ -381,7 +411,7 @@
         "max_completion_tokens": 235929,
         "is_moderated": false
       },
-      "last_seen": "2026-11-03"
+      "last_seen": "2026-11-04"
     },
     {
       "id": "thinkingmachines/inkling:free",
@@ -409,7 +439,7 @@
         "max_completion_tokens": 262144,
         "is_moderated": false
       },
-      "last_seen": "2026-11-03"
+      "last_seen": "2026-11-04"
     },
     {
       "id": "thinkingmachines/inkling-small:free",
@@ -437,7 +467,7 @@
         "max_completion_tokens": 262144,
         "is_moderated": false
       },
-      "last_seen": "2026-11-03"
+      "last_seen": "2026-11-04"
     },
     {
       "id": "xingchen-agi/xing4.0-29b-a4b:free",
@@ -463,7 +493,7 @@
         "max_completion_tokens": 235929,
         "is_moderated": false
       },
-      "last_seen": "2026-11-03"
+      "last_seen": "2026-11-04"
     }
   ]
 }
