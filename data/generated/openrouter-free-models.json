@@ -1,7 +1,7 @@
 {
   "source": "https://openrouter.ai/api/v1/models",
-  "generated_at": "2026-11-20T12:53:01Z",
-  "count": 15,
+  "generated_at": "2026-11-21T12:38:26Z",
+  "count": 14,
   "models": [
     {
       "id": "baidu/ernie-5.5-flash-preview:free",
@@ -27,34 +27,7 @@
         "max_completion_tokens": 921600,
         "is_moderated": false
       },
-      "last_seen": "2026-11-20"
-    },
-    {
-      "id": "dots-studio/dots-3-note-preview:free",
-      "name": "Dots Studio: Dots3-Note Preview (free)",
-      "context_length": 512000,
-      "architecture": {
-        "modality": "text+image->text",
-        "input_modalities": [
-          "text",
-          "image"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0",
-        "completion": "0"
-      },
-      "top_provider": {
-        "context_length": 512000,
-        "max_completion_tokens": 460800,
-        "is_moderated": false
-      },
-      "last_seen": "2026-11-20"
+      "last_seen": "2026-11-21"
     },
     {
       "id": "openrouter/free",
@@ -81,7 +54,7 @@
         "max_completion_tokens": null,
         "is_moderated": false
       },
-      "last_seen": "2026-11-20"
+      "last_seen": "2026-11-21"
     },
     {
       "id": "google/gemma-4-26b-a4b-it:free",
@@ -109,7 +82,7 @@
         "max_completion_tokens": 32768,
         "is_moderated": false
       },
-      "last_seen": "2026-11-20"
+      "last_seen": "2026-11-21"
     },
     {
       "id": "google/gemma-4-31b-it:free",
@@ -137,7 +110,7 @@
         "max_completion_tokens": 32768,
         "is_moderated": false
       },
-      "last_seen": "2026-11-20"
+      "last_seen": "2026-11-21"
     },
     {
       "id": "google/lyria-3-clip-preview",
@@ -165,7 +138,7 @@
         "max_completion_tokens": 65536,
         "is_moderated": false
       },
-      "last_seen": "2026-11-20"
+      "last_seen": "2026-11-21"
     },
     {
       "id": "google/lyria-3-pro-preview",
@@ -193,7 +166,7 @@
         "max_completion_tokens": 65536,
         "is_moderated": false
       },
-      "last_seen": "2026-11-20"
+      "last_seen": "2026-11-21"
     },
     {
       "id": "inclusionai/ling-3.2-flash:free",
@@ -220,7 +193,7 @@
         "max_completion_tokens": 262144,
         "is_moderated": false
       },
-      "last_seen": "2026-11-20"
+      "last_seen": "2026-11-21"
     },
     {
       "id": "liquid/lfm-3-1.7b:free",
@@ -246,7 +219,7 @@
         "max_completion_tokens": 8192,
         "is_moderated": false
       },
-      "last_seen": "2026-11-20"
+      "last_seen": "2026-11-21"
     },
     {
       "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
@@ -275,7 +248,7 @@
         "max_completion_tokens": 65536,
         "is_moderated": false
       },
-      "last_seen": "2026-11-20"
+      "last_seen": "2026-11-21"
     },
     {
       "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
@@ -301,7 +274,7 @@
         "max_completion_tokens": 65536,
         "is_moderated": false
       },
-      "last_seen": "2026-11-20"
+      "last_seen": "2026-11-21"
     },
     {
       "id": "nvidia/nemotron-3.5-lightning:free",
@@ -327,7 +300,7 @@
         "max_completion_tokens": 65536,
         "is_moderated": false
       },
-      "last_seen": "2026-11-20"
+      "last_seen": "2026-11-21"
     },
     {
       "id": "nvidia/nemotron-3.5-super-vl:free",
@@ -355,7 +328,7 @@
         "max_completion_tokens": 131072,
         "is_moderated": false
       },
-      "last_seen": "2026-11-20"
+      "last_seen": "2026-11-21"
     },
     {
       "id": "particle-ai/particle-1:free",
@@ -382,7 +355,7 @@
         "max_completion_tokens": 131072,
         "is_moderated": false
       },
-      "last_seen": "2026-11-20"
+      "last_seen": "2026-11-21"
     },
     {
       "id": "recursive/flint-v1.0:free",
@@ -408,7 +381,7 @@
         "max_completion_tokens": 235929,
         "is_moderated": false
       },
-      "last_seen": "2026-11-20"
+      "last_seen": "2026-11-21"
     }
   ]
 }
