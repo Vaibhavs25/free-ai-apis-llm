@@ -1,6 +1,6 @@
 {
   "source": "https://openrouter.ai/api/v1/models",
-  "generated_at": "2026-11-23T14:37:50Z",
+  "generated_at": "2026-11-24T14:51:45Z",
   "count": 15,
   "models": [
     {
@@ -27,7 +27,7 @@
         "max_completion_tokens": 921600,
         "is_moderated": false
       },
-      "last_seen": "2026-11-23"
+      "last_seen": "2026-11-24"
     },
     {
       "id": "dots-studio/dots-3-note-preview:free",
@@ -54,7 +54,7 @@
         "max_completion_tokens": 460800,
         "is_moderated": false
       },
-      "last_seen": "2026-11-23"
+      "last_seen": "2026-11-24"
     },
     {
       "id": "openrouter/free",
@@ -81,7 +81,7 @@
         "max_completion_tokens": null,
         "is_moderated": false
       },
-      "last_seen": "2026-11-23"
+      "last_seen": "2026-11-24"
     },
     {
       "id": "google/gemma-4-26b-a4b-it:free",
@@ -109,7 +109,7 @@
         "max_completion_tokens": 32768,
         "is_moderated": false
       },
-      "last_seen": "2026-11-23"
+      "last_seen": "2026-11-24"
     },
     {
       "id": "google/gemma-4-31b-it:free",
@@ -137,7 +137,7 @@
         "max_completion_tokens": 32768,
         "is_moderated": false
       },
-      "last_seen": "2026-11-23"
+      "last_seen": "2026-11-24"
     },
     {
       "id": "google/lyria-3-clip-preview",
@@ -165,7 +165,7 @@
         "max_completion_tokens": 65536,
         "is_moderated": false
       },
-      "last_seen": "2026-11-23"
+      "last_seen": "2026-11-24"
     },
     {
       "id": "google/lyria-3-pro-preview",
@@ -193,7 +193,7 @@
         "max_completion_tokens": 65536,
         "is_moderated": false
       },
-      "last_seen": "2026-11-23"
+      "last_seen": "2026-11-24"
     },
     {
       "id": "inclusionai/ling-3.2-flash:free",
@@ -220,7 +220,7 @@
         "max_completion_tokens": 262144,
         "is_moderated": false
       },
-      "last_seen": "2026-11-23"
+      "last_seen": "2026-11-24"
     },
     {
       "id": "liquid/lfm-3-1.7b:free",
@@ -246,7 +246,7 @@
         "max_completion_tokens": 8192,
         "is_moderated": false
       },
-      "last_seen": "2026-11-23"
+      "last_seen": "2026-11-24"
     },
     {
       "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
@@ -275,7 +275,7 @@
         "max_completion_tokens": 65536,
         "is_moderated": false
       },
-      "last_seen": "2026-11-23"
+      "last_seen": "2026-11-24"
     },
     {
       "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
@@ -301,7 +301,7 @@
         "max_completion_tokens": 65536,
         "is_moderated": false
       },
-      "last_seen": "2026-11-23"
+      "last_seen": "2026-11-24"
     },
     {
       "id": "nvidia/nemotron-3.5-lightning:free",
@@ -327,7 +327,7 @@
         "max_completion_tokens": 65536,
         "is_moderated": false
       },
-      "last_seen": "2026-11-23"
+      "last_seen": "2026-11-24"
     },
     {
       "id": "nvidia/nemotron-3.5-super-vl:free",
@@ -355,7 +355,7 @@
         "max_completion_tokens": 131072,
         "is_moderated": false
       },
-      "last_seen": "2026-11-23"
+      "last_seen": "2026-11-24"
     },
     {
       "id": "particle-ai/particle-1:free",
@@ -382,7 +382,7 @@
         "max_completion_tokens": 131072,
         "is_moderated": false
       },
-      "last_seen": "2026-11-23"
+      "last_seen": "2026-11-24"
     },
     {
       "id": "recursive/flint-v1.0:free",
@@ -408,7 +408,7 @@
         "max_completion_tokens": 235929,
         "is_moderated": false
       },
-      "last_seen": "2026-11-23"
+      "last_seen": "2026-11-24"
     }
   ]
 }
