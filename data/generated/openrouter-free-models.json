@@ -1,7 +1,7 @@
 {
   "source": "https://openrouter.ai/api/v1/models",
-  "generated_at": "2026-11-26T13:53:26Z",
-  "count": 14,
+  "generated_at": "2026-11-27T13:51:13Z",
+  "count": 13,
   "models": [
     {
       "id": "baidu/ernie-5.5-flash-preview:free",
@@ -27,7 +27,7 @@
         "max_completion_tokens": 921600,
         "is_moderated": false
       },
-      "last_seen": "2026-11-26"
+      "last_seen": "2026-11-27"
     },
     {
       "id": "openrouter/free",
@@ -54,7 +54,7 @@
         "max_completion_tokens": null,
         "is_moderated": false
       },
-      "last_seen": "2026-11-26"
+      "last_seen": "2026-11-27"
     },
     {
       "id": "google/gemma-4-26b-a4b-it:free",
@@ -82,7 +82,7 @@
         "max_completion_tokens": 32768,
         "is_moderated": false
       },
-      "last_seen": "2026-11-26"
+      "last_seen": "2026-11-27"
     },
     {
       "id": "google/gemma-4-31b-it:free",
@@ -110,7 +110,7 @@
         "max_completion_tokens": 32768,
         "is_moderated": false
       },
-      "last_seen": "2026-11-26"
+      "last_seen": "2026-11-27"
     },
     {
       "id": "google/lyria-3-clip-preview",
@@ -138,7 +138,7 @@
         "max_completion_tokens": 65536,
         "is_moderated": false
       },
-      "last_seen": "2026-11-26"
+      "last_seen": "2026-11-27"
     },
     {
       "id": "google/lyria-3-pro-preview",
@@ -166,34 +166,7 @@
         "max_completion_tokens": 65536,
         "is_moderated": false
       },
-      "last_seen": "2026-11-26"
-    },
-    {
-      "id": "inclusionai/ling-3.2-flash:free",
-      "name": "inclusionAI: Ling 3.2 Flash (free)",
-      "context_length": 1048576,
-      "architecture": {
-        "modality": "text+image->text",
-        "input_modalities": [
-          "text",
-          "image"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0",
-        "completion": "0"
-      },
-      "top_provider": {
-        "context_length": 1048576,
-        "max_completion_tokens": 262144,
-        "is_moderated": false
-      },
-      "last_seen": "2026-11-26"
+      "last_seen": "2026-11-27"
     },
     {
       "id": "liquid/lfm-3-1.7b:free",
@@ -219,7 +192,7 @@
         "max_completion_tokens": 8192,
         "is_moderated": false
       },
-      "last_seen": "2026-11-26"
+      "last_seen": "2026-11-27"
     },
     {
       "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
@@ -248,7 +221,7 @@
         "max_completion_tokens": 65536,
         "is_moderated": false
       },
-      "last_seen": "2026-11-26"
+      "last_seen": "2026-11-27"
     },
     {
       "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
@@ -274,7 +247,7 @@
         "max_completion_tokens": 65536,
         "is_moderated": false
       },
-      "last_seen": "2026-11-26"
+      "last_seen": "2026-11-27"
     },
     {
       "id": "nvidia/nemotron-3.5-lightning:free",
@@ -300,7 +273,7 @@
         "max_completion_tokens": 65536,
         "is_moderated": false
       },
-      "last_seen": "2026-11-26"
+      "last_seen": "2026-11-27"
     },
     {
       "id": "nvidia/nemotron-3.5-super-vl:free",
@@ -328,7 +301,7 @@
         "max_completion_tokens": 131072,
         "is_moderated": false
       },
-      "last_seen": "2026-11-26"
+      "last_seen": "2026-11-27"
     },
     {
       "id": "particle-ai/particle-1:free",
@@ -355,7 +328,7 @@
         "max_completion_tokens": 943718,
         "is_moderated": false
       },
-      "last_seen": "2026-11-26"
+      "last_seen": "2026-11-27"
     },
     {
       "id": "recursive/flint-v1.0:free",
@@ -381,7 +354,7 @@
         "max_completion_tokens": 235929,
         "is_moderated": false
       },
-      "last_seen": "2026-11-26"
+      "last_seen": "2026-11-27"
     }
   ]
 }
